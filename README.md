@@ -1,6 +1,6 @@
-# lost
+# WhatsApp clone
 
-A new Flutter project.
+A WhatsApp clone with flutter
 
 ## Getting Started
 

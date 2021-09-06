@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lost/peace.dart';
+import 'package:lost/view_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
               ),
         ),
       ),
-      home: const Hooland(),
+      home: const Callibar(),
     );
   }
 }
@@ -44,11 +46,12 @@ class _HoolandState extends State<Hooland> {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
+            elevation: 0.0,
             title: const Text(
               'WhatsApp',
               style: TextStyle(
-                fontWeight: FontWeight.w500,
-                fontSize: 26,
+                fontWeight: FontWeight.w100,
+                fontSize: 22,
               ),
             ),
             snap: false,
@@ -57,6 +60,7 @@ class _HoolandState extends State<Hooland> {
             flexibleSpace: FlexibleSpaceBar(
               centerTitle: true,
               background: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
@@ -71,7 +75,7 @@ class _HoolandState extends State<Hooland> {
                               curve: Curves.linear,
                             );
                           },
-                          text: 'Chats',
+                          text: 'Home',
                         ),
                         TexButton(
                           callback: () {
@@ -81,7 +85,7 @@ class _HoolandState extends State<Hooland> {
                               curve: Curves.linear,
                             );
                           },
-                          text: 'Status',
+                          text: 'card',
                         ),
                         TexButton(
                           callback: () {
@@ -91,7 +95,17 @@ class _HoolandState extends State<Hooland> {
                               curve: Curves.linear,
                             );
                           },
-                          text: 'Calls',
+                          text: 'card',
+                        ),
+                        TexButton(
+                          callback: () {
+                            controller.animateToPage(
+                              3,
+                              duration: const Duration(milliseconds: 300),
+                              curve: Curves.linear,
+                            );
+                          },
+                          text: 'fast',
                         ),
                       ],
                     ),
@@ -99,22 +113,15 @@ class _HoolandState extends State<Hooland> {
                 ],
               ),
             ),
-            expandedHeight: 200,
+            expandedHeight: 400,
             backgroundColor: Colors.green,
-            leading: IconButton(
-              icon: const Icon(
-                CupertinoIcons.xmark,
-                color: Colors.white,
-                size: 20,
-              ),
-              tooltip: 'Menu',
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
             actions: <Widget>[
               IconButton(
-                icon: const Icon(Icons.settings),
+                icon: const Icon(
+                  Icons.menu,
+                  color: Colors.white,
+                  size: 20,
+                ),
                 tooltip: 'Setting Icon',
                 color: Colors.white,
                 onPressed: () {},
@@ -124,12 +131,8 @@ class _HoolandState extends State<Hooland> {
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (context, index) => SizedBox(
-                height: 1000,
-                child: PageView(
-                  controller: controller,
-                  scrollDirection: Axis.horizontal,
-                  children: const [Chats(), Status(), Calls()],
-                ),
+                height: MediaQuery.of(context).size.width,
+                child: const ViewPage(),
               ),
               childCount: 1,
             ),

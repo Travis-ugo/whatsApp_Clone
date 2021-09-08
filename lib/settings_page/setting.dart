@@ -7,30 +7,6 @@ class Settings extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    void _logOutDialog(
-      BuildContext context,
-    ) {
-      showDialog<void>(
-        context: context,
-        builder: (context) {
-          return AlertDialog(
-            title: const Text(
-              'Confirm loggout',
-              style: TextStyle(fontSize: 16),
-            ),
-            actions: <Widget>[
-              TextButton(
-                  onPressed: () {},
-                  child: const Text(
-                    'confirm',
-                    style: TextStyle(color: Colors.redAccent),
-                  )),
-            ],
-          );
-        },
-      );
-    }
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
@@ -43,9 +19,7 @@ class Settings extends StatelessWidget {
           const Icon(Icons.search_outlined),
           const SizedBox(width: 10),
           IconButton(
-            onPressed: () {
-              _logOutDialog(context);
-            },
+            onPressed: () {},
             icon: const Icon(Icons.menu_outlined),
           ),
           const SizedBox(width: 20),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:lost/utils/data.dart';
 import 'package:lost/utils/item_list.dart';
 
 class Calls extends StatelessWidget {

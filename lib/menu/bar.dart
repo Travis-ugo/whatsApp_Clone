@@ -13,6 +13,33 @@ class Land extends StatefulWidget {
 }
 
 class _LandState extends State<Land> {
+  void _logOutDialog(
+    BuildContext context,
+  ) {
+    showDialog<void>(
+      context: context,
+      builder: (context) {
+        return SizedBox(
+          height: 100,
+          child: AlertDialog(elevation: 0.0, actions: [
+            Column(
+              children: [
+                const Text('New Group'),
+                const Text('New Broadcast'),
+                const Text('Linked Devices'),
+                const Text('Sharred messages'),
+                TextButton(
+                  child: const Text('Settings'),
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          ]),
+        );
+      },
+    );
+  }
+
   PageController controller = PageController(initialPage: 0);
   int bottomSelectedIndex = 0;
 
@@ -20,12 +47,9 @@ class _LandState extends State<Land> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.green,
-        child: const Icon(
-          Icons.message_outlined,
-          color: Colors.white,
-        ),
         onPressed: () {},
+        child: const Icon(Icons.message),
+        backgroundColor: Colors.green,
       ),
       body: CustomScrollView(
         slivers: <Widget>[
@@ -42,11 +66,16 @@ class _LandState extends State<Land> {
             pinned: true,
             floating: false,
             elevation: 0.0,
-            actions: const [
-              Icon(Icons.search),
-              SizedBox(width: 10),
-              Icon(Icons.more_vert),
-              SizedBox(width: 20),
+            actions: [
+              const Icon(Icons.search),
+              const SizedBox(width: 10),
+              IconButton(
+                icon: const Icon(Icons.more_vert),
+                onPressed: () {
+                  _logOutDialog(context);
+                },
+              ),
+              const SizedBox(width: 20),
             ],
             flexibleSpace: Column(
               mainAxisAlignment: MainAxisAlignment.end,

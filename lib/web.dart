@@ -11,7 +11,7 @@ class WebChat extends StatelessWidget {
     final _passwordController = TextEditingController();
     return Scaffold(
       appBar: AppBar(
-        title: Text('Mad stuffs'),
+        title: const Text('Mad stuffs'),
       ),
       body: Row(
         children: [

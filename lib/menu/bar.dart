@@ -99,7 +99,7 @@ class _LandState extends State<Land> {
                   scrollDirection: Axis.horizontal,
                   children: const [
                     CameraPage(),
-                    Chats(),
+                    Chat(),
                     Status(),
                     Calls(),
                   ],

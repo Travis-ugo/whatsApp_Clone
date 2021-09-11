@@ -5,8 +5,8 @@ import 'package:flutter/widgets.dart';
 import 'package:lost/utils/item_list.dart';
 import 'chat_room.dart';
 
-class Chat extends StatelessWidget {
-  const Chat({Key? key}) : super(key: key);
+class Chats extends StatelessWidget {
+  const Chats({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -87,4 +87,68 @@ SliverAppBar showSliverAppBar(String screenTitle) {
       ],
     ),
   );
+}
+
+class ChatRoomWeb extends StatelessWidget {
+  const ChatRoomWeb({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final _passwordController = TextEditingController();
+    return Scaffold(
+      body: Column(
+        children: [
+          TextButton(
+            onPressed: () {
+              //  Navigator.pop(context);
+            },
+            child: const Center(child: Text('Go Back')),
+          ),
+          Positioned(
+            bottom: 0.0,
+            child: Expanded(
+              child: Container(
+                height: 60,
+                color: Colors.green,
+                child: Row(
+                  children: [
+                    const SizedBox(width: 10),
+                    const Icon(CupertinoIcons.smiley),
+                    const SizedBox(width: 10),
+                    const Icon(Icons.attach_file_rounded),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 40),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          color: Colors.pink,
+                        ),
+                        height: 44,
+                        child: TextFormField(
+                          controller: _passwordController,
+                          decoration: const InputDecoration(
+                            border: InputBorder.none,
+                            focusedBorder: InputBorder.none,
+                            enabledBorder: InputBorder.none,
+                            disabledBorder: InputBorder.none,
+                            errorBorder: InputBorder.none,
+                            hintText: 'Type a message',
+                          ),
+                        ),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      child: Icon(CupertinoIcons.smiley),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }

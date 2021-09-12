@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lost/web.dart';
+import 'package:lost/web/web.dart';
+import 'package:lost/web/web_status.dart';
 
 void main() {
   runApp(const MyApp());

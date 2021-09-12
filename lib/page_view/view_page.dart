@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lost/screens/status.dart';
-import 'package:lost/web.dart';
+import 'package:lost/web/web.dart';
 
 import '../screens/calls.dart';
 import '../screens/chats.dart';

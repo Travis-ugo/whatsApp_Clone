@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
-import 'package:lost/screens/chart_web.dart';
 import 'package:lost/screens/chat_room.dart';
-import 'package:lost/utils/data.dart';
 import 'package:lost/utils/item_list.dart';
+import 'package:lost/web/web_chatroom.dart';
+import 'web_menu.dart';
+import 'web_draw.dart';
 
 class WebChat extends StatelessWidget {
   const WebChat({Key? key}) : super(key: key);
@@ -13,30 +15,51 @@ class WebChat extends StatelessWidget {
   Widget build(BuildContext context) {
     final _passwordController = TextEditingController();
     return Scaffold(
-      drawer: Drawer(),
+      endDrawer: const SizedBox(
+        width: 450,
+        child: Drawer(
+          elevation: 0.0,
+          child: WebDrawer(),
+        ),
+      ),
+      drawerScrimColor: Colors.transparent,
+      drawer: const SizedBox(
+        width: 450,
+        child: Drawer(
+          elevation: 0.0,
+          child: WebDrawer(),
+        ),
+      ),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.lightGreen,
         elevation: 0.0,
-        actions: const [
-          Icon(
-            CupertinoIcons.search,
-            size: 20,
+        actions: [
+          Builder(
+            builder: (context) => IconButton(
+              icon: const Icon(
+                CupertinoIcons.search,
+                size: 20,
+              ),
+              onPressed: () {
+                Scaffold.of(context).openEndDrawer();
+              },
+            ),
           ),
-          SizedBox(width: 25),
-          Icon(
+          const SizedBox(width: 25),
+          const Icon(
             Icons.expand_more,
             size: 20,
           ),
-          SizedBox(width: 25),
+          const SizedBox(width: 25),
         ],
-        title: const Bar(),
+        title: const MenuBar(),
       ),
       body: Row(
         children: [
           Container(
             decoration: const BoxDecoration(
               border: Border(
-                top: BorderSide(width: 0.5, color: Colors.grey),
                 right: BorderSide(width: 0.5, color: Colors.grey),
               ),
             ),
@@ -56,7 +79,11 @@ class WebChat extends StatelessWidget {
                         enabledBorder: InputBorder.none,
                         disabledBorder: InputBorder.none,
                         errorBorder: InputBorder.none,
-                        hintText: 'Search',
+                        hintText: 'Search or start new chart',
+                        hintStyle: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w100,
+                        ),
                       ),
                     ),
                   ),
@@ -165,70 +192,6 @@ class Field extends StatelessWidget {
         borderRadius: BorderRadius.circular(60),
       ),
       child: Center(child: child),
-    );
-  }
-}
-
-class Bar extends StatelessWidget {
-  const Bar({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Row(
-          children: [
-            const SizedBox(width: 220),
-            CircleAvatar(
-              radius: 22,
-              backgroundImage: AssetImage(
-                profile.profilepicture,
-              ),
-            ),
-            const SizedBox(width: 25),
-            IconButton(
-              icon: const Icon(Icons.motion_photos_on_outlined, size: 22),
-              onPressed: () {},
-            ),
-            const SizedBox(width: 25),
-            const Icon(Icons.check_box_outline_blank, size: 22),
-            const SizedBox(width: 25),
-            const Icon(Icons.expand_more),
-            const SizedBox(width: 25),
-            Container(
-              height: 100,
-              color: Colors.grey,
-              width: 0.5,
-            ),
-          ],
-        ),
-        Row(
-          children: [
-            const SizedBox(width: 25),
-            CircleAvatar(
-              radius: 22,
-              backgroundImage: AssetImage(
-                profile.profilepicture,
-              ),
-            ),
-            const SizedBox(width: 20),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text(
-                  'Hope and trust group chat',
-                  style: TextStyle(fontWeight: FontWeight.w100),
-                ),
-                Text(
-                  'Hope and trust group chat',
-                  style: TextStyle(fontWeight: FontWeight.w100, fontSize: 12),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ],
     );
   }
 }

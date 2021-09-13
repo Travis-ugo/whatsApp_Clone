@@ -20,10 +20,14 @@ class WebDrawer extends StatelessWidget {
             child: Align(
               alignment: Alignment.bottomLeft,
               child: Row(
-                children: const [
-                  Icon(Icons.arrow_back, color: Colors.white, size: 20),
-                  SizedBox(width: 30),
-                  Text(
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.arrow_back,
+                        color: Colors.white, size: 20),
+                  ),
+                  const SizedBox(width: 30),
+                  const Text(
                     'Profile',
                     style: TextStyle(
                       fontSize: 18,
@@ -50,10 +54,10 @@ class WebDrawer extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 30),
-                const Text(
+                Text(
                   'Your Name',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.green[700],
                     fontSize: 13,
                     fontWeight: FontWeight.w100,
                   ),
@@ -85,10 +89,10 @@ class WebDrawer extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 30),
-                const Text(
+                Text(
                   'About',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.green[700],
                     fontSize: 13,
                     fontWeight: FontWeight.w100,
                   ),

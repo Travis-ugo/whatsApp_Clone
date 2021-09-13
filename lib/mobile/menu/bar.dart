@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:lost/mobile/calls.dart';
+import 'package:lost/mobile/chats.dart';
+import 'package:lost/mobile/status.dart';
 import 'package:lost/screens/carmera.dart';
-import '../screens/calls.dart';
-import '../screens/chats.dart';
-import '../screens/status.dart';
 import 'bottom_bar.dart';
 
 class Land extends StatefulWidget {
@@ -46,11 +46,6 @@ class _LandState extends State<Land> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.message),
-        backgroundColor: Colors.green,
-      ),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(

@@ -12,7 +12,7 @@ class Status extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.green,
         child: const Icon(
-          Icons.call,
+          Icons.camera,
           color: Colors.white,
         ),
         onPressed: () {},

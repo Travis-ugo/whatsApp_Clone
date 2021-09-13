@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:lost/screens/status.dart';
+import 'package:lost/mobile/calls.dart';
+import 'package:lost/mobile/chats.dart';
+import 'package:lost/mobile/status.dart';
 import 'package:lost/web/web.dart';
-
-import '../screens/calls.dart';
-import '../screens/chats.dart';
 
 class ViewPage extends StatelessWidget {
   const ViewPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    PageController controller = PageController(initialPage: 1);
+    PageController controller = PageController(initialPage: 0);
     //int bottomSelectedIndex = 0;
     return PageView(
       controller: controller,

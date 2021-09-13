@@ -1,12 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lost/page_view/view_page.dart';
-import 'package:lost/web/web.dart';
-import 'package:lost/web/web_status.dart';
-
-import 'mobile/menu/bar.dart';
-import 'web/web_message.dart';
+import 'package:lost/web/web_status_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +23,7 @@ class MyApp extends StatelessWidget {
               ),
         ),
       ),
-      home: const Land(),
+      home: const WebStatusView(),
     );
   }
 }

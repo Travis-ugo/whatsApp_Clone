@@ -4,6 +4,8 @@ import 'package:flutter/widgets.dart';
 import 'package:lost/utils/data.dart';
 import 'package:lost/utils/item_list.dart';
 
+import 'desktop_status_view.dart';
+
 class WebStatus extends StatelessWidget {
   const WebStatus({Key? key}) : super(key: key);
 
@@ -45,17 +47,27 @@ class WebStatus extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
                   padding: const EdgeInsets.symmetric(vertical: 5),
-                  child: ListTile(
-                    leading: CircleAvatar(
-                      radius: 29,
-                      backgroundImage: AssetImage(
-                        chats[index].profilepicture,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Statuslist(),
+                        ),
+                      );
+                    },
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        radius: 29,
+                        backgroundImage: AssetImage(
+                          chats[index].profilepicture,
+                        ),
                       ),
-                    ),
-                    title: Text(chats[index].name),
-                    subtitle: Text(
-                      "today at " + chats[index].messages + " minutes ago",
-                      style: const TextStyle(fontSize: 12),
+                      title: Text(chats[index].name),
+                      subtitle: Text(
+                        "today at " + chats[index].messages + " minutes ago",
+                        style: const TextStyle(fontSize: 12),
+                      ),
                     ),
                   ),
                 );

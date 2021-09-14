@@ -48,7 +48,6 @@ class TextFieldWeb extends StatelessWidget {
                   ),
                   height: 42,
                   child: TextFormField(
-                    textAlign: TextAlign.center,
                     autofocus: true,
                     controller: _passwordController,
                     decoration: const InputDecoration(

@@ -1,54 +1,40 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:lost/web/web_message.dart';
 
-class ChatRoomWeb extends StatelessWidget {
-  const ChatRoomWeb({Key? key}) : super(key: key);
+import 'mobile_message.dart';
 
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: const [
-        Expanded(
-          flex: 8,
-          child: WebMessages(),
-        ),
-        TextFieldWeb(),
-      ],
-    );
-  }
-}
-
-class TextFieldWeb extends StatelessWidget {
-  const TextFieldWeb({Key? key}) : super(key: key);
+class MobileTextField extends StatelessWidget {
+  const MobileTextField({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final _passwordController = TextEditingController();
-    return Positioned(
-      bottom: 0.0,
-      child: Expanded(
-        flex: 0,
-        child: Container(
-          height: 60,
-          color: Colors.green,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Expanded(
+          child: SizedBox(
+            child: const MobileMessages(),
+            width: MediaQuery.of(context).size.width,
+          ),
+        ),
+        Container(
+          height: 55,
+          width: MediaQuery.of(context).size.width,
+          padding: const EdgeInsets.symmetric(horizontal: 8),
           child: Row(
             children: [
-              const SizedBox(width: 10),
-              const Icon(CupertinoIcons.smiley),
-              const SizedBox(width: 10),
-              const Icon(Icons.attach_file_rounded),
-              const SizedBox(width: 10),
               Expanded(
                 child: Container(
+                  width: 400,
                   padding: const EdgeInsets.symmetric(horizontal: 40),
                   decoration: BoxDecoration(
+                    color: Colors.black45,
                     borderRadius: BorderRadius.circular(30),
-                    color: Colors.white,
                   ),
                   height: 42,
                   child: TextFormField(
-                    textAlign: TextAlign.center,
+                    textAlign: TextAlign.start,
                     autofocus: true,
                     controller: _passwordController,
                     decoration: const InputDecoration(
@@ -62,14 +48,20 @@ class TextFieldWeb extends StatelessWidget {
                   ),
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Icon(CupertinoIcons.mic),
-              ),
+              const SizedBox(width: 8),
+              Container(
+                child: const Icon(Icons.mic),
+                height: 42,
+                width: 42,
+                decoration: BoxDecoration(
+                  color: Colors.green.shade300,
+                  borderRadius: BorderRadius.circular(100),
+                ),
+              )
             ],
           ),
         ),
-      ),
+      ],
     );
   }
 }

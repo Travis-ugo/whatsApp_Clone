@@ -72,8 +72,13 @@ class WebChat extends StatelessWidget {
                       const EdgeInsets.symmetric(vertical: 7, horizontal: 25),
                   child: Field(
                     child: TextFormField(
+                      //textAlign: TextAlign.center,
                       controller: _passwordController,
                       decoration: const InputDecoration(
+                        //     contentPadding:
+                        //     EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+                        // border: OutlineInputBorder(
+                        //     borderRadius: BorderRadius.circular(5.0)),
                         icon: Icon(CupertinoIcons.search, size: 15),
                         border: InputBorder.none,
                         focusedBorder: InputBorder.none,

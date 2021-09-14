@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:lost/mobile/calls.dart';
 import 'package:lost/mobile/chats.dart';
 import 'package:lost/mobile/status.dart';
-import 'package:lost/screens/carmera.dart';
 import 'bottom_bar.dart';
 
 class Land extends StatefulWidget {
@@ -93,7 +92,7 @@ class _LandState extends State<Land> {
                   controller: controller,
                   scrollDirection: Axis.horizontal,
                   children: const [
-                    CameraPage(),
+                    // CameraPage(),
                     Chat(),
                     Status(),
                     Calls(),

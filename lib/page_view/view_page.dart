@@ -24,7 +24,7 @@ class WebPageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    PageController controller = PageController(initialPage: 1);
+    PageController controller = PageController(initialPage: 0);
     return PageView(
       controller: controller,
       scrollDirection: Axis.horizontal,

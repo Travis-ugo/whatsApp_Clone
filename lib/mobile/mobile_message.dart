@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class WebMessages extends StatelessWidget {
-  const WebMessages({Key? key}) : super(key: key);
+class MobileMessages extends StatelessWidget {
+  const MobileMessages({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,27 +10,31 @@ class WebMessages extends StatelessWidget {
       itemCount: 13,
       itemBuilder: (BuildContext context, int index) {
         return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 50),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: const [
-              MessageBox(
-                leftHand: 10,
+              MobileMessageBox(
+                color: Colors.black38,
+                leftHand: 20,
                 rightHand: 0,
                 align: Alignment.topRight,
               ),
-              MessageBox(
+              MobileMessageBox(
+                color: Colors.teal,
                 leftHand: 0,
-                rightHand: 10,
+                rightHand: 20,
                 align: Alignment.topLeft,
               ),
-              MessageBox(
-                leftHand: 10,
+              MobileMessageBox(
+                color: Colors.black38,
+                leftHand: 20,
                 rightHand: 0,
                 align: Alignment.topRight,
               ),
-              MessageBox(
+              MobileMessageBox(
+                color: Colors.teal,
                 leftHand: 0,
-                rightHand: 10,
+                rightHand: 20,
                 align: Alignment.topLeft,
               ),
             ],
@@ -41,9 +45,10 @@ class WebMessages extends StatelessWidget {
   }
 }
 
-class MessageBox extends StatelessWidget {
-  const MessageBox({
+class MobileMessageBox extends StatelessWidget {
+  const MobileMessageBox({
     Key? key,
+    required this.color,
     required this.rightHand,
     required this.leftHand,
     required this.align,
@@ -51,6 +56,7 @@ class MessageBox extends StatelessWidget {
   final AlignmentGeometry align;
   final double rightHand;
   final double leftHand;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -58,17 +64,17 @@ class MessageBox extends StatelessWidget {
       alignment: align,
       child: ConstrainedBox(
         constraints: const BoxConstraints(
-          maxWidth: 400,
+          maxWidth: 200,
         ),
         child: Container(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(15),
           decoration: BoxDecoration(
-            color: Colors.teal,
+            color: color,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(leftHand),
               topRight: Radius.circular(rightHand),
-              bottomRight: const Radius.circular(10),
-              bottomLeft: const Radius.circular(10),
+              bottomRight: const Radius.circular(20),
+              bottomLeft: const Radius.circular(20),
             ),
           ),
           child: Column(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lost/utils/data.dart';
 
-import 'web_status.dart';
+import 'desktop_status.dart';
 
 class MenuBar extends StatelessWidget {
   const MenuBar({Key? key}) : super(key: key);

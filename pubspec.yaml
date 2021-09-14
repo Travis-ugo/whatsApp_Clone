@@ -14,11 +14,13 @@ dependencies:
   cupertino_icons: ^1.0.2
   camera: ^0.9.2+2
   video_player: ^2.1.15
+  quiver: ^3.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  google_fonts: ^2.0.0  
+  google_fonts: ^2.0.0
+
 
   flutter_lints: ^1.0.0
 flutter:

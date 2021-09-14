@@ -1,8 +1,11 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:lost/Desktop/desktop.dart';
 import 'package:lost/mobile/calls.dart';
 import 'package:lost/mobile/chats.dart';
 import 'package:lost/mobile/status.dart';
-import 'package:lost/web/web.dart';
+import 'package:lost/utils/item_list.dart';
 
 class ViewPage extends StatelessWidget {
   const ViewPage({Key? key}) : super(key: key);
@@ -14,7 +17,7 @@ class ViewPage extends StatelessWidget {
     return PageView(
       controller: controller,
       scrollDirection: Axis.horizontal,
-      children: const [Chat(), Status(), Calls()],
+      children: [Chat(instance: chats), Status(), Calls()],
     );
   }
 }

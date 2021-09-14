@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:lost/utils/data.dart';
 
 class MobileMessages extends StatelessWidget {
-  const MobileMessages({Key? key}) : super(key: key);
+  const MobileMessages({
+    Key? key,
+    required this.chats,
+  }) : super(key: key);
+  final Chats chats;
 
   @override
   Widget build(BuildContext context) {
@@ -12,30 +17,34 @@ class MobileMessages extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
-            children: const [
+            children: [
               MobileMessageBox(
                 color: Colors.black38,
                 leftHand: 20,
                 rightHand: 0,
                 align: Alignment.topRight,
+                text: profile.firstMessage,
               ),
               MobileMessageBox(
                 color: Colors.teal,
                 leftHand: 0,
                 rightHand: 20,
                 align: Alignment.topLeft,
+                text: chats.firstMessage,
               ),
               MobileMessageBox(
                 color: Colors.black38,
                 leftHand: 20,
                 rightHand: 0,
                 align: Alignment.topRight,
+                text: profile.firstMessage,
               ),
               MobileMessageBox(
                 color: Colors.teal,
                 leftHand: 0,
                 rightHand: 20,
                 align: Alignment.topLeft,
+                text: chats.firstMessage,
               ),
             ],
           ),
@@ -52,11 +61,13 @@ class MobileMessageBox extends StatelessWidget {
     required this.rightHand,
     required this.leftHand,
     required this.align,
+    required this.text,
   }) : super(key: key);
   final AlignmentGeometry align;
   final double rightHand;
   final double leftHand;
   final Color color;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -80,13 +91,13 @@ class MobileMessageBox extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
-              Text('909090909090', style: TextStyle(fontSize: 12)),
-              SizedBox(height: 10),
+            children: [
+              const Text('909090909090', style: TextStyle(fontSize: 12)),
+              const SizedBox(height: 10),
               Text(
-                'Woolha dot com Woolha dot com Woolha dot com Woolha dot com Woolha dot com Woolha dot com Woolha dot com Woolha dot com Woolha dot com Woolha dot com Woolha dot com Woolha dot com',
+                text,
                 textAlign: TextAlign.start,
-                style: TextStyle(color: Colors.white, fontSize: 14),
+                style: const TextStyle(color: Colors.white, fontSize: 14),
                 overflow: TextOverflow.visible,
               ),
             ],

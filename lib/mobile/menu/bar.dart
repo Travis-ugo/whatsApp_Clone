@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lost/mobile/calls.dart';
 import 'package:lost/mobile/chats.dart';
 import 'package:lost/mobile/status.dart';
+import 'package:lost/utils/item_list.dart';
 import 'bottom_bar.dart';
 
 class Land extends StatefulWidget {
@@ -12,33 +13,6 @@ class Land extends StatefulWidget {
 }
 
 class _LandState extends State<Land> {
-  void _logOutDialog(
-    BuildContext context,
-  ) {
-    showDialog<void>(
-      context: context,
-      builder: (context) {
-        return SizedBox(
-          height: 100,
-          child: AlertDialog(elevation: 0.0, actions: [
-            Column(
-              children: [
-                const Text('New Group'),
-                const Text('New Broadcast'),
-                const Text('Linked Devices'),
-                const Text('Sharred messages'),
-                TextButton(
-                  child: const Text('Settings'),
-                  onPressed: () {},
-                ),
-              ],
-            ),
-          ]),
-        );
-      },
-    );
-  }
-
   PageController controller = PageController(initialPage: 0);
   int bottomSelectedIndex = 0;
 
@@ -91,11 +65,11 @@ class _LandState extends State<Land> {
                 child: PageView(
                   controller: controller,
                   scrollDirection: Axis.horizontal,
-                  children: const [
+                  children: [
                     // CameraPage(),
-                    Chat(),
-                    Status(),
-                    Calls(),
+                    Chat(instance: chats),
+                    const Status(),
+                    const Calls(),
                   ],
                 ),
               ),
@@ -106,4 +80,31 @@ class _LandState extends State<Land> {
       ),
     );
   }
+}
+
+void _logOutDialog(
+  BuildContext context,
+) {
+  showDialog<void>(
+    context: context,
+    builder: (context) {
+      return SizedBox(
+        height: 100,
+        child: AlertDialog(elevation: 0.0, actions: [
+          Column(
+            children: [
+              const Text('New Group'),
+              const Text('New Broadcast'),
+              const Text('Linked Devices'),
+              const Text('Sharred messages'),
+              TextButton(
+                child: const Text('Settings'),
+                onPressed: () {},
+              ),
+            ],
+          ),
+        ]),
+      );
+    },
+  );
 }

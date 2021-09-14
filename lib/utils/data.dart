@@ -48,7 +48,7 @@ class MyProfile {
 
 final MyProfile profile = MyProfile(
   name: 'Travis Okonicha',
-  firstMessage: '',
+  firstMessage: 'Homty Domty left town',
   profilepicture: 'assets/6.jpeg',
   time: '',
   description: 'Tap to add status update',

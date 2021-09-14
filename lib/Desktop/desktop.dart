@@ -2,12 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
-import 'package:lost/mobile/chat_room.dart';
-import 'package:lost/utils/item_list.dart';
-import 'package:lost/web/web_chatroom.dart';
-import 'web_chat.dart';
-import 'web_menu.dart';
-import 'web_draw.dart';
+import 'package:lost/Desktop/desktop_chatroom.dart';
+import 'desktop_menu.dart';
+import 'desktop_draw.dart';
 
 class WebChat extends StatelessWidget {
   const WebChat({Key? key}) : super(key: key);

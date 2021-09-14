@@ -2,14 +2,21 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+import 'package:lost/utils/data.dart';
 import 'package:lost/utils/item_list.dart';
-import 'web_chatroom.dart';
+import 'desktop_chatroom.dart';
 
 class WebChat extends StatelessWidget {
   const WebChat({Key? key}) : super(key: key);
 
+  // print(data);
+  //  data['title'],
+
   @override
   Widget build(BuildContext context) {
+    // Map? data = ModalRoute.of(context).settings.arguments;
+
+    // Map data = {};
     return ListView.builder(
       itemCount: chats.length,
       itemBuilder: (BuildContext context, int index) {
@@ -17,6 +24,12 @@ class WebChat extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
+                // Chats instance = setting;
+                // Navigator.pushNamed(context, '/mobileInfo', arguments: {
+                //   'firstMessage': instance.firstMessage,
+                //   'name': instance.name,
+                //   'profilePicture': instance.profilepicture,
+                // });
                 Navigator.push(
                   context,
                   MaterialPageRoute(

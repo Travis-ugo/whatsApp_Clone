@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:lost/web/web_message.dart';
+import 'package:lost/Desktop/desktop_message.dart';
 
 class ChatRoomWeb extends StatelessWidget {
   const ChatRoomWeb({Key? key}) : super(key: key);

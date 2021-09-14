@@ -1,10 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lost/utils/data.dart';
+import 'package:lost/utils/item_list.dart';
 
 import 'mobile_message.dart';
 
 class MobileTextField extends StatelessWidget {
-  const MobileTextField({Key? key}) : super(key: key);
+  const MobileTextField({
+    Key? key,
+    required this.chats,
+  }) : super(key: key);
+  final Chats chats;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +20,9 @@ class MobileTextField extends StatelessWidget {
       children: [
         Expanded(
           child: SizedBox(
-            child: const MobileMessages(),
+            child: MobileMessages(
+              chats: chats,
+            ),
             width: MediaQuery.of(context).size.width,
           ),
         ),

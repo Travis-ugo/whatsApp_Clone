@@ -2,11 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+import 'package:lost/utils/data.dart';
 import 'package:lost/utils/item_list.dart';
 import 'chat_room.dart';
 
 class Chat extends StatelessWidget {
-  const Chat({Key? key}) : super(key: key);
+  const Chat({Key? key, required this.instance}) : super(key: key);
+  final List<Chats> instance;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,9 @@ class Chat extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const ChatRoom(),
+                    builder: (context) => ChatRoom(
+                      chats: instance[index],
+                    ),
                   ),
                 );
               },

@@ -19,7 +19,7 @@ class MobileMessages extends StatelessWidget {
           child: Column(
             children: [
               MobileMessageBox(
-                color: Colors.black38,
+                color: const Color(0xFFD3FEC5),
                 leftHand: 15,
                 rightHand: 0,
                 align: Alignment.topRight,
@@ -27,7 +27,7 @@ class MobileMessages extends StatelessWidget {
                 chats: chats,
               ),
               MobileMessageBox(
-                color: Colors.teal,
+                color: const Color(0xFFF5F5F5),
                 leftHand: 0,
                 rightHand: 15,
                 align: Alignment.topLeft,
@@ -35,7 +35,7 @@ class MobileMessages extends StatelessWidget {
                 chats: chats,
               ),
               MobileMessageBox(
-                color: Colors.black38,
+                color: const Color(0xFFD3FEC5),
                 leftHand: 15,
                 rightHand: 0,
                 align: Alignment.topRight,
@@ -43,7 +43,7 @@ class MobileMessages extends StatelessWidget {
                 chats: chats,
               ),
               MobileMessageBox(
-                color: Colors.teal,
+                color: const Color(0xFFF5F5F5),
                 leftHand: 0,
                 rightHand: 15,
                 align: Alignment.topLeft,
@@ -101,13 +101,16 @@ class MobileMessageBox extends StatelessWidget {
               Text(
                 text,
                 textAlign: TextAlign.start,
-                style: const TextStyle(color: Colors.white, fontSize: 14),
+                style: TextStyle(color: Colors.grey[800], fontSize: 14),
                 overflow: TextOverflow.visible,
               ),
               const SizedBox(height: 3),
               Text(
                 chats.time,
-                style: const TextStyle(fontSize: 8),
+                style: TextStyle(
+                  fontSize: 9,
+                  color: Colors.grey[600],
+                ),
                 textAlign: TextAlign.left,
               ),
             ],

@@ -88,6 +88,7 @@ class WebStarStatus extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black87,
       body: Row(
         children: [
           Container(
@@ -107,7 +108,11 @@ class WebStarStatus extends StatelessWidget {
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      icon: const Icon(CupertinoIcons.xmark, size: 20),
+                      icon: Icon(
+                        CupertinoIcons.xmark,
+                        size: 20,
+                        color: Colors.grey[300],
+                      ),
                     ),
                   ),
                 ),
@@ -115,12 +120,19 @@ class WebStarStatus extends StatelessWidget {
                 Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(Icons.circle_outlined, size: 100),
-                      SizedBox(height: 25),
+                    children: [
+                      Icon(
+                        Icons.circle_outlined,
+                        size: 100,
+                        color: Colors.grey[300],
+                      ),
+                      const SizedBox(height: 25),
                       Text(
                         'Click on a contact to view their status updates',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.grey[300],
+                        ),
                       )
                     ],
                   ),

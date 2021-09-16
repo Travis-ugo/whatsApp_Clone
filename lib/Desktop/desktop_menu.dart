@@ -13,14 +13,14 @@ class MenuBar extends StatelessWidget {
       children: [
         Row(
           children: [
-            const SizedBox(width: 203),
+            const SizedBox(width: 193),
             Builder(
               builder: (context) => GestureDetector(
                 onTap: () {
                   Scaffold.of(context).openDrawer();
                 },
                 child: CircleAvatar(
-                  radius: 22,
+                  radius: 20,
                   backgroundImage: AssetImage(
                     profile.profilepicture,
                   ),
@@ -29,7 +29,11 @@ class MenuBar extends StatelessWidget {
             ),
             const SizedBox(width: 25),
             IconButton(
-              icon: const Icon(Icons.motion_photos_on_outlined, size: 22),
+              icon: Icon(
+                Icons.motion_photos_on_outlined,
+                size: 20,
+                color: Colors.grey[400],
+              ),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -40,14 +44,22 @@ class MenuBar extends StatelessWidget {
               },
             ),
             const SizedBox(width: 25),
-            const Icon(Icons.check_box_outline_blank, size: 22),
+            Icon(
+              Icons.check_box_outline_blank,
+              size: 20,
+              color: Colors.grey[400],
+            ),
             const SizedBox(width: 25),
-            const Icon(Icons.expand_more),
+            Icon(
+              Icons.expand_more,
+              size: 20,
+              color: Colors.grey[400],
+            ),
             const SizedBox(width: 25),
             Container(
               height: 100,
-              color: Colors.grey,
-              width: 0.5,
+              width: 0.4,
+              color: Colors.grey[400],
             ),
           ],
         ),
@@ -55,24 +67,19 @@ class MenuBar extends StatelessWidget {
           children: [
             const SizedBox(width: 25),
             CircleAvatar(
-              radius: 22,
+              radius: 20,
               backgroundImage: AssetImage(
                 profile.profilepicture,
               ),
             ),
             const SizedBox(width: 20),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text(
-                  'Hope and trust group chat',
-                  style: TextStyle(fontWeight: FontWeight.w100),
-                ),
-                Text(
-                  'Hope and trust group chat',
-                  style: TextStyle(fontWeight: FontWeight.w100, fontSize: 12),
-                ),
-              ],
+            Text(
+              'Hope and trust',
+              style: TextStyle(
+                fontWeight: FontWeight.w100,
+                fontSize: 16,
+                color: Colors.grey[200],
+              ),
             ),
           ],
         ),

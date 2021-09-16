@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lost/utils/data.dart';
@@ -37,32 +39,41 @@ class MobileTextField extends StatelessWidget {
                   width: 400,
                   padding: const EdgeInsets.symmetric(horizontal: 40),
                   decoration: BoxDecoration(
-                    color: Colors.black45,
+                    color: const Color(0xFFF5F5F5),
                     borderRadius: BorderRadius.circular(30),
                   ),
                   height: 42,
                   child: TextFormField(
                     textAlign: TextAlign.start,
+                    style: TextStyle(color: Colors.grey[800]),
                     autofocus: true,
                     controller: _passwordController,
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
+                      icon: Icon(
+                        CupertinoIcons.smiley,
+                        color: Colors.grey[400],
+                      ),
                       border: InputBorder.none,
                       focusedBorder: InputBorder.none,
                       enabledBorder: InputBorder.none,
                       disabledBorder: InputBorder.none,
                       errorBorder: InputBorder.none,
-                      hintText: 'Type a message',
+                      hintText: 'Message',
+                      hintStyle: TextStyle(color: Colors.grey[400]),
                     ),
                   ),
                 ),
               ),
               const SizedBox(width: 8),
               Container(
-                child: const Icon(Icons.mic),
+                child: Icon(
+                  Icons.mic,
+                  color: Colors.grey[300],
+                ),
                 height: 42,
                 width: 42,
                 decoration: BoxDecoration(
-                  color: Colors.green.shade300,
+                  color: const Color(0xFF128c7e),
                   borderRadius: BorderRadius.circular(100),
                 ),
               )

@@ -116,6 +116,7 @@ class Statuslist extends StatelessWidget {
                       width: MediaQuery.of(context).size.width - 700,
                       child: Center(
                         child: TextFormField(
+                          style: const TextStyle(color: Colors.white),
                           autofocus: true,
                           controller: _passwordController,
                           decoration: const InputDecoration(

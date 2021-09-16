@@ -43,14 +43,18 @@ class WebChat extends StatelessWidget {
                     chats[index].profilepicture,
                   ),
                 ),
-                title: Text(chats[index].name),
+                title: Text(
+                  chats[index].name,
+                  style: TextStyle(color: Colors.grey[200]),
+                ),
                 subtitle: Text(
                   chats[index].firstMessage,
+                  style: TextStyle(color: Colors.grey[400]),
                 ),
                 trailing: Column(children: [
                   Text(
                     chats[index].time,
-                    style: const TextStyle(fontSize: 12),
+                    style: TextStyle(fontSize: 12, color: Colors.grey[400]),
                   ),
                   const SizedBox(
                     height: 5,
@@ -70,7 +74,7 @@ class WebChat extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 12,
                           color: (chats[index].addToCart
-                              ? Colors.grey[100]
+                              ? Colors.grey[200]
                               : Colors.transparent),
                         ),
                       ),
@@ -79,8 +83,11 @@ class WebChat extends StatelessWidget {
                 ]),
               ),
             ),
-            const SizedBox(height: 5),
-            const Divider(),
+            Divider(
+              color: Colors.grey[600],
+              indent: 85,
+              endIndent: 10,
+            ),
             const SizedBox(height: 5),
           ],
         );

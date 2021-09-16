@@ -2,12 +2,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lost/page_view/view_page.dart';
-import 'package:lost/utils/item_list.dart';
-import 'Desktop/desktop.dart';
-import 'Desktop/desktop_status.dart';
-import 'mobile/calls.dart';
-import 'mobile/menu/bar.dart';
+import 'Responsive/responsive_layout.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,14 +21,45 @@ class MyApp extends StatelessWidget {
       // },
       title: 'WhatsApp',
       theme: ThemeData(
-        primaryColor: const Color(0xFFf6f6f6),
-        textTheme: GoogleFonts.montserratTextTheme(
+        primaryColor: const Color(0xFF0B0D0F),
+        textTheme: GoogleFonts.varelaRoundTextTheme(
           Theme.of(context).textTheme.apply(
                 bodyColor: (const Color(0xFF0B0D0F)),
               ),
         ),
       ),
-      home: Land(),
+      home: const CallFrame(),
+    );
+  }
+}
+
+class CallFrame extends StatelessWidget {
+  const CallFrame({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          CircleAvatar(
+            radius: 29,
+          ),
+          Text('Buchi'),
+          Text('calling'),
+          Container(
+            child: Row(
+              children: [
+                Icon(Icons.volume_up),
+                Icon(Icons.volume_up),
+                Icon(Icons.volume_up),
+                Icon(Icons.volume_up),
+                Icon(Icons.volume_up),
+                Icon(Icons.volume_up)
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

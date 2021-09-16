@@ -14,16 +14,17 @@ class Web extends StatelessWidget {
   Widget build(BuildContext context) {
     final _passwordController = TextEditingController();
     return Scaffold(
+      backgroundColor: const Color(0xFF111C21),
       endDrawer: const SizedBox(
         width: 450,
         child: Drawer(
           elevation: 0.0,
-          child: WebDrawer(),
+          child: EndDrawer(),
         ),
       ),
       drawerScrimColor: Colors.transparent,
       drawer: const SizedBox(
-        width: 450,
+        width: 425,
         child: Drawer(
           elevation: 0.0,
           child: WebDrawer(),
@@ -31,14 +32,33 @@ class Web extends StatelessWidget {
       ),
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.lightGreen,
+        backgroundColor: const Color(0xFF2D3333),
         elevation: 0.0,
         actions: [
+          Icon(
+            CupertinoIcons.video_camera,
+            size: 25,
+            color: Colors.grey[400],
+          ),
+          const SizedBox(width: 25),
+          Icon(
+            Icons.call,
+            size: 18,
+            color: Colors.grey[400],
+          ),
+          const SizedBox(width: 25),
+          VerticalDivider(
+            indent: 18,
+            endIndent: 18,
+            color: Colors.grey[400],
+          ),
+          const SizedBox(width: 25),
           Builder(
             builder: (context) => IconButton(
-              icon: const Icon(
+              icon: Icon(
                 CupertinoIcons.search,
-                size: 20,
+                size: 19,
+                color: Colors.grey[400],
               ),
               onPressed: () {
                 Scaffold.of(context).openEndDrawer();
@@ -46,9 +66,10 @@ class Web extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 25),
-          const Icon(
+          Icon(
             Icons.expand_more,
-            size: 20,
+            size: 23,
+            color: Colors.grey[400],
           ),
           const SizedBox(width: 25),
         ],
@@ -58,21 +79,31 @@ class Web extends StatelessWidget {
         children: [
           Container(
             decoration: const BoxDecoration(
+              color: Color(0xFF111C21),
               border: Border(
-                right: BorderSide(width: 0.5, color: Colors.grey),
+                right: BorderSide(
+                  width: 0.5,
+                  color: Color(0xFFADADAD),
+                ),
               ),
             ),
-            width: 450,
+            width: 430,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
                   padding:
                       const EdgeInsets.symmetric(vertical: 7, horizontal: 25),
                   child: Field(
                     child: TextFormField(
+                      style: const TextStyle(color: Colors.white),
                       controller: _passwordController,
-                      decoration: const InputDecoration(
-                        icon: Icon(CupertinoIcons.search, size: 15),
+                      decoration: InputDecoration(
+                        icon: Icon(
+                          CupertinoIcons.search,
+                          size: 15,
+                          color: Colors.grey[400],
+                        ),
                         border: InputBorder.none,
                         focusedBorder: InputBorder.none,
                         enabledBorder: InputBorder.none,
@@ -82,6 +113,7 @@ class Web extends StatelessWidget {
                         hintStyle: TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w100,
+                          color: Colors.grey[400],
                         ),
                       ),
                     ),
@@ -96,7 +128,7 @@ class Web extends StatelessWidget {
           ),
           const Expanded(
             child: ChatRoomWeb(),
-            flex: 2,
+            flex: 4,
           ),
         ],
       ),
@@ -112,9 +144,9 @@ class Field extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 15),
-      height: 40,
+      height: 37,
       decoration: BoxDecoration(
-        color: Colors.grey[300],
+        color: const Color(0xFF2D3333),
         borderRadius: BorderRadius.circular(60),
       ),
       child: Center(child: child),

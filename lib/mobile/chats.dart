@@ -42,7 +42,7 @@ class Chat extends StatelessWidget {
               trailing: Column(children: [
                 Text(
                   chats[index].time,
-                  style: const TextStyle(fontSize: 12),
+                  style: const TextStyle(fontSize: 12, color: Colors.green),
                 ),
                 const SizedBox(
                   height: 5,

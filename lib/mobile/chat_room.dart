@@ -12,20 +12,32 @@ class ChatRoom extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.black45,
+        backgroundColor: const Color(0xFF128c7e),
         automaticallyImplyLeading: false,
         actions: const [
-          Icon(Icons.video_camera_back),
+          Icon(
+            CupertinoIcons.video_camera_solid,
+            size: 25,
+          ),
           SizedBox(width: 10),
-          Icon(Icons.call),
+          Icon(
+            Icons.call,
+            size: 20,
+          ),
           SizedBox(width: 10),
-          Icon(Icons.more_vert),
+          Icon(
+            Icons.more_vert,
+            size: 20,
+          ),
           SizedBox(width: 10),
         ],
         title: Row(
           children: [
             IconButton(
-              icon: const Icon(Icons.arrow_back),
+              icon: const Icon(
+                Icons.arrow_back,
+                size: 18,
+              ),
               onPressed: () {
                 Navigator.pop(context);
               },
@@ -33,11 +45,12 @@ class ChatRoom extends StatelessWidget {
             const SizedBox(width: 0),
             CircleAvatar(
               backgroundImage: AssetImage(chats.profilepicture),
+              radius: 18,
             ),
             const SizedBox(width: 10),
             Text(
               chats.name,
-              style: const TextStyle(fontWeight: FontWeight.w100),
+              style: const TextStyle(fontWeight: FontWeight.w100, fontSize: 16),
             ),
           ],
         ),

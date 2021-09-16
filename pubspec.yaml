@@ -18,6 +18,8 @@ dependencies:
   path_provider: ^2.0.3
   path: ^1.8.0
   percent_indicator: ^3.0.1
+  responsive_builder: ^0.4.1
+  fluentui_system_icons: ^1.1.138
   
 
 dev_dependencies:

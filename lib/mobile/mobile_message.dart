@@ -20,31 +20,35 @@ class MobileMessages extends StatelessWidget {
             children: [
               MobileMessageBox(
                 color: Colors.black38,
-                leftHand: 20,
+                leftHand: 15,
                 rightHand: 0,
                 align: Alignment.topRight,
                 text: profile.firstMessage,
+                chats: chats,
               ),
               MobileMessageBox(
                 color: Colors.teal,
                 leftHand: 0,
-                rightHand: 20,
+                rightHand: 15,
                 align: Alignment.topLeft,
                 text: chats.firstMessage,
+                chats: chats,
               ),
               MobileMessageBox(
                 color: Colors.black38,
-                leftHand: 20,
+                leftHand: 15,
                 rightHand: 0,
                 align: Alignment.topRight,
                 text: profile.firstMessage,
+                chats: chats,
               ),
               MobileMessageBox(
                 color: Colors.teal,
                 leftHand: 0,
-                rightHand: 20,
+                rightHand: 15,
                 align: Alignment.topLeft,
                 text: chats.firstMessage,
+                chats: chats,
               ),
             ],
           ),
@@ -62,12 +66,14 @@ class MobileMessageBox extends StatelessWidget {
     required this.leftHand,
     required this.align,
     required this.text,
+    required this.chats,
   }) : super(key: key);
   final AlignmentGeometry align;
   final double rightHand;
   final double leftHand;
   final Color color;
   final String text;
+  final Chats chats;
 
   @override
   Widget build(BuildContext context) {
@@ -78,27 +84,31 @@ class MobileMessageBox extends StatelessWidget {
           maxWidth: 200,
         ),
         child: Container(
-          padding: const EdgeInsets.all(15),
+          padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             color: color,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(leftHand),
               topRight: Radius.circular(rightHand),
-              bottomRight: const Radius.circular(20),
-              bottomLeft: const Radius.circular(20),
+              bottomRight: const Radius.circular(15),
+              bottomLeft: const Radius.circular(15),
             ),
           ),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              const Text('909090909090', style: TextStyle(fontSize: 12)),
-              const SizedBox(height: 10),
               Text(
                 text,
                 textAlign: TextAlign.start,
                 style: const TextStyle(color: Colors.white, fontSize: 14),
                 overflow: TextOverflow.visible,
+              ),
+              const SizedBox(height: 3),
+              Text(
+                chats.time,
+                style: const TextStyle(fontSize: 8),
+                textAlign: TextAlign.left,
               ),
             ],
           ),

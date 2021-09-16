@@ -1,80 +1,26 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:lost/mobile/chats.dart';
-
-import 'desktop.dart';
-
-class WebStatusView extends StatelessWidget {
-  const WebStatusView({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    PageController controller = PageController(initialPage: 6);
-    return Scaffold(
-      body: Container(
-        color: Colors.black,
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        child: PageView(
-          controller: controller,
-          scrollDirection: Axis.horizontal,
-          children: [
-            Container(
-              height: 600,
-              width: 600,
-              child: Image.asset('assets/2.jpeg'),
-            ),
-            Container(
-              height: 600,
-              width: 600,
-              child: Image.asset('assets/3.jpeg'),
-            ),
-            Container(
-              height: 600,
-              width: 600,
-              child: Image.asset('assets/4.jpeg'),
-            ),
-            Container(
-              height: 600,
-              width: 600,
-              child: Image.asset('assets/5.jpeg'),
-            ),
-            Container(
-              height: 600,
-              width: 600,
-              child: Image.asset('assets/6.jpeg'),
-            ),
-            Container(
-              height: 600,
-              width: 600,
-              child: Image.asset('assets/7.jpeg'),
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-// class Display extends StatelessWidget {
-//   const Display({Key? key}) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return const Scaffold(body: WebStatusView());
-//   }
-// }
+import 'package:lost/utils/data.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class Statuslist extends StatelessWidget {
-  const Statuslist({Key? key}) : super(key: key);
+  const Statuslist({Key? key, required this.chats}) : super(key: key);
+  final Chats chats;
 
   @override
   Widget build(BuildContext context) {
     final _passwordController = TextEditingController();
     return Scaffold(
-      backgroundColor: Colors.black12,
+      backgroundColor: Colors.black,
       body: Stack(
         children: [
+          Center(
+            child: Image(
+              image: AssetImage(
+                chats.profilepicture,
+              ),
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.all(40.0),
             child: Column(
@@ -91,6 +37,20 @@ class Statuslist extends StatelessWidget {
                         Icons.arrow_back,
                         size: 20,
                         color: Colors.white,
+                      ),
+                    ),
+                    Center(
+                      child: LinearPercentIndicator(
+                        width: MediaQuery.of(context).size.width / 4,
+                        lineHeight: 10.0,
+                        percent: 1.0,
+                        backgroundColor: Colors.grey,
+                        progressColor: Colors.white,
+                        animation: true,
+                        animationDuration: 3500,
+                        onAnimationEnd: () {
+                          Navigator.pop(context);
+                        },
                       ),
                     ),
                     IconButton(
@@ -171,7 +131,7 @@ class Statuslist extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 10),
-                    Icon(
+                    const Icon(
                       Icons.send,
                       size: 30,
                       color: Colors.white,

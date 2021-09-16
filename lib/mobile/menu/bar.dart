@@ -16,9 +16,15 @@ class _LandState extends State<Land> {
   PageController controller = PageController(initialPage: 0);
   int bottomSelectedIndex = 0;
 
+  IconData icon = Icons.message;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.green,
+        child: Icon(icon),
+        onPressed: () {},
+      ),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
@@ -63,12 +69,23 @@ class _LandState extends State<Land> {
               (context, index) => SizedBox(
                 height: MediaQuery.of(context).size.height,
                 child: PageView(
+                  onPageChanged: (int index) {
+                    setState(() {
+                      if (index == 2) {
+                        icon = Icons.call;
+                      } else if (index == 1) {
+                        icon = Icons.local_see;
+                      } else {
+                        icon = Icons.message;
+                      }
+                    });
+                  },
                   controller: controller,
                   scrollDirection: Axis.horizontal,
                   children: [
                     // CameraPage(),
                     Chat(instance: chats),
-                    const Status(),
+                    Status(instance: chats),
                     const Calls(),
                   ],
                 ),

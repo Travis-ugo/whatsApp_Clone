@@ -12,70 +12,61 @@ class Chat extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.green,
-        child: const Icon(
-          Icons.message_outlined,
-        ),
-        onPressed: () {},
-      ),
-      body: ListView.builder(
-        itemCount: chats.length,
-        itemBuilder: (BuildContext context, int index) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10),
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ChatRoom(
-                      chats: instance[index],
-                    ),
-                  ),
-                );
-              },
-              child: ListTile(
-                leading: CircleAvatar(
-                  radius: 29,
-                  backgroundImage: AssetImage(
-                    chats[index].profilepicture,
+    return ListView.builder(
+      itemCount: chats.length,
+      itemBuilder: (BuildContext context, int index) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10),
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ChatRoom(
+                    chats: instance[index],
                   ),
                 ),
-                title: Text(chats[index].name),
-                subtitle: Text(
-                  chats[index].firstMessage,
+              );
+            },
+            child: ListTile(
+              leading: CircleAvatar(
+                radius: 29,
+                backgroundImage: AssetImage(
+                  chats[index].profilepicture,
                 ),
-                trailing: Column(children: [
-                  Text(
-                    chats[index].time,
-                    style: const TextStyle(fontSize: 12),
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  CircleAvatar(
-                    backgroundColor: (chats[index].addToCart
-                        ? Colors.green
-                        : Colors.transparent),
-                    radius: 12,
-                    child: Text(
-                      chats[index].messages,
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: (chats[index].addToCart
-                            ? Colors.grey[100]
-                            : Colors.transparent),
-                      ),
-                    ),
-                  ),
-                ]),
               ),
+              title: Text(chats[index].name),
+              subtitle: Text(
+                chats[index].firstMessage,
+              ),
+              trailing: Column(children: [
+                Text(
+                  chats[index].time,
+                  style: const TextStyle(fontSize: 12),
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                CircleAvatar(
+                  backgroundColor: (chats[index].addToCart
+                      ? Colors.green
+                      : Colors.transparent),
+                  radius: 12,
+                  child: Text(
+                    chats[index].messages,
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: (chats[index].addToCart
+                          ? Colors.grey[100]
+                          : Colors.transparent),
+                    ),
+                  ),
+                ),
+              ]),
             ),
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }

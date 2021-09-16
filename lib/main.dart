@@ -2,7 +2,12 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lost/page_view/view_page.dart';
+import 'package:lost/utils/item_list.dart';
 import 'Desktop/desktop.dart';
+import 'Desktop/desktop_status.dart';
+import 'mobile/calls.dart';
+import 'mobile/menu/bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +33,7 @@ class MyApp extends StatelessWidget {
               ),
         ),
       ),
-      home: const WebChat(),
+      home: Land(),
     );
   }
 }

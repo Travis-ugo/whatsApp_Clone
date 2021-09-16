@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:lost/Desktop/desktop_chatroom.dart';
+import 'desktop_chat.dart';
 import 'desktop_menu.dart';
 import 'desktop_draw.dart';
 
-class WebChat extends StatelessWidget {
-  const WebChat({Key? key}) : super(key: key);
+class Web extends StatelessWidget {
+  const Web({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -69,13 +70,8 @@ class WebChat extends StatelessWidget {
                       const EdgeInsets.symmetric(vertical: 7, horizontal: 25),
                   child: Field(
                     child: TextFormField(
-                      //textAlign: TextAlign.center,
                       controller: _passwordController,
                       decoration: const InputDecoration(
-                        //     contentPadding:
-                        //     EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-                        // border: OutlineInputBorder(
-                        //     borderRadius: BorderRadius.circular(5.0)),
                         icon: Icon(CupertinoIcons.search, size: 15),
                         border: InputBorder.none,
                         focusedBorder: InputBorder.none,
@@ -93,7 +89,6 @@ class WebChat extends StatelessWidget {
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height - 120,
-                  // width: 450,
                   child: const WebChat(),
                 ),
               ],
@@ -125,19 +120,4 @@ class Field extends StatelessWidget {
       child: Center(child: child),
     );
   }
-}
-
-carriage(PageController controller, IconData icon, int index) {
-  return IconButton(
-    icon: Icon(
-      icon,
-    ),
-    onPressed: () {
-      controller.animateToPage(
-        index,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.linear,
-      );
-    },
-  );
 }

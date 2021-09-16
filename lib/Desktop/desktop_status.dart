@@ -7,7 +7,8 @@ import 'package:lost/utils/item_list.dart';
 import 'desktop_status_view.dart';
 
 class WebStatus extends StatelessWidget {
-  const WebStatus({Key? key}) : super(key: key);
+  const WebStatus({Key? key, required this.instance}) : super(key: key);
+  final List<Chats> instance;
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +53,8 @@ class WebStatus extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const Statuslist(),
+                          builder: (context) =>
+                              Statuslist(chats: instance[index]),
                         ),
                       );
                     },
@@ -88,41 +90,42 @@ class WebStarStatus extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-          SizedBox(
+          Container(
+            color: Colors.grey[200],
             width: 450,
             height: MediaQuery.of(context).size.height,
-            child: const WebStatus(),
+            child: WebStatus(instance: chats),
           ),
           Expanded(
-            child: Container(
-              color: Colors.brown,
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Align(
-                      alignment: Alignment.topRight,
-                      child: IconButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        icon: const Icon(CupertinoIcons.xmark, size: 20),
-                      ),
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Align(
+                    alignment: Alignment.topRight,
+                    child: IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: const Icon(CupertinoIcons.xmark, size: 20),
                     ),
                   ),
-                  Center(
-                    child: Container(
-                      height: 600,
-                      width: 800,
-                      color: Colors.green,
-                      child: TextButton(
-                        onPressed: () {},
-                        child: const Center(child: Text('Go Back')),
-                      ),
-                    ),
+                ),
+                const SizedBox(height: 220),
+                Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Icon(Icons.circle_outlined, size: 100),
+                      SizedBox(height: 25),
+                      Text(
+                        'Click on a contact to view their status updates',
+                        style: TextStyle(fontSize: 16),
+                      )
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ],

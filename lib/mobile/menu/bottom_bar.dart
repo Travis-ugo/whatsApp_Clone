@@ -23,7 +23,7 @@ bottomBar(PageController controller) {
       TexButton(
         callback: () {
           controller.animateToPage(
-            1,
+            0,
             duration: const Duration(milliseconds: 300),
             curve: Curves.linear,
           );
@@ -34,7 +34,7 @@ bottomBar(PageController controller) {
       TexButton(
         callback: () {
           controller.animateToPage(
-            2,
+            1,
             duration: const Duration(milliseconds: 300),
             curve: Curves.linear,
           );
@@ -45,7 +45,7 @@ bottomBar(PageController controller) {
       TexButton(
         callback: () {
           controller.animateToPage(
-            3,
+            2,
             duration: const Duration(milliseconds: 300),
             curve: Curves.linear,
           );

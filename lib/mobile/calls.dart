@@ -8,11 +8,6 @@ class Calls extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.green,
-        child: const Icon(Icons.call),
-        onPressed: () {},
-      ),
       body: ListView.builder(
         itemCount: chats.length,
         itemBuilder: (BuildContext context, int index) {
@@ -35,11 +30,7 @@ class Calls extends StatelessWidget {
                     color: (chats[index].addToCart ? Colors.green : Colors.red),
                   ),
                   Text(
-                    ' September ' +
-                        chats[index].messages +
-                        "" +
-                        chats[index].time +
-                        ' AM',
+                    ' September ' + chats[index].time + ' AM',
                   ),
                 ],
               ),

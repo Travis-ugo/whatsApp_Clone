@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:lost/Desktop/desktop.dart';
+import 'package:lost/Desktop/desktop_status.dart';
 import 'package:lost/mobile/calls.dart';
 import 'package:lost/mobile/chats.dart';
 import 'package:lost/mobile/status.dart';
@@ -17,7 +18,7 @@ class ViewPage extends StatelessWidget {
     return PageView(
       controller: controller,
       scrollDirection: Axis.horizontal,
-      children: [Chat(instance: chats), Status(), Calls()],
+      children: [Chat(instance: chats), Status(instance: chats), Calls()],
     );
   }
 }
@@ -31,7 +32,7 @@ class WebPageView extends StatelessWidget {
     return PageView(
       controller: controller,
       scrollDirection: Axis.horizontal,
-      children: const [WebChat(), Status(), Calls()],
+      children: [Web(), WebStatus(instance: chats), Calls()],
     );
   }
 }

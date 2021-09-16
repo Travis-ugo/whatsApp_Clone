@@ -42,8 +42,10 @@ class ChatRoom extends StatelessWidget {
           ],
         ),
       ),
-      body: MobileTextField(
-        chats: chats,
+      body: SafeArea(
+        child: MobileTextField(
+          chats: chats,
+        ),
       ),
     );
   }

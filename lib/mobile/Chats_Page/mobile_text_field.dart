@@ -1,10 +1,7 @@
 import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lost/utils/data.dart';
-import 'package:lost/utils/item_list.dart';
-
 import 'mobile_message.dart';
 
 class MobileTextField extends StatelessWidget {

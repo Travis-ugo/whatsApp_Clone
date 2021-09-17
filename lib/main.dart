@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'mobile/Landing_Page/landing_page.dart';
+import 'Responsive/responsive_layout.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
               ),
         ),
       ),
-      home: LandingPageDesktop(),
+      home: const Response(),
     );
   }
 }

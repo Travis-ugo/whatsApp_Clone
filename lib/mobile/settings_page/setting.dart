@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lost/utils/data.dart';
 import 'package:lost/utils/item_list.dart';
 
+// Mobile setting page.
+
 class Settings extends StatelessWidget {
   const Settings({Key? key}) : super(key: key);
 

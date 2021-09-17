@@ -7,12 +7,15 @@ import '../Chat_Desktop/desktop_chat.dart';
 import 'desktop_menu.dart';
 import 'desktop_draw.dart';
 
+const bool pageTime = true;
+
 class Web extends StatelessWidget {
   const Web({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final _passwordController = TextEditingController();
+
     return Scaffold(
       backgroundColor: const Color(0xFF111C21),
       endDrawer: const SizedBox(
@@ -128,6 +131,12 @@ class Web extends StatelessWidget {
           ),
           const Expanded(
             child: ChatRoomWeb(),
+            // (pageTime == true)
+            //     ? Image(
+            //         image: AssetImage('assets/face.png'),
+            //         fit: BoxFit.fill,
+            //       )
+            //     : ChatRoomWeb(),
             flex: 4,
           ),
         ],

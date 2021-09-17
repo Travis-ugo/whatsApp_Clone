@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lost/main.dart';
 
 bottomBar(PageController controller) {
   return Row(

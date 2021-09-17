@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
-import 'package:lost/Desktop/desktop_chatroom.dart';
-import 'desktop_chat.dart';
+import 'package:lost/Desktop/Chat_Desktop/desktop_chatroom.dart';
+import '../Chat_Desktop/desktop_chat.dart';
 import 'desktop_menu.dart';
 import 'desktop_draw.dart';
 

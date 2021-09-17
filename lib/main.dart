@@ -1,8 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'Responsive/responsive_layout.dart';
+import 'mobile/Landing_Page/landing_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,38 +29,7 @@ class MyApp extends StatelessWidget {
               ),
         ),
       ),
-      home: const CallFrame(),
-    );
-  }
-}
-
-class CallFrame extends StatelessWidget {
-  const CallFrame({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          CircleAvatar(
-            radius: 29,
-          ),
-          Text('Buchi'),
-          Text('calling'),
-          Container(
-            child: Row(
-              children: [
-                Icon(Icons.volume_up),
-                Icon(Icons.volume_up),
-                Icon(Icons.volume_up),
-                Icon(Icons.volume_up),
-                Icon(Icons.volume_up),
-                Icon(Icons.volume_up)
-              ],
-            ),
-          ),
-        ],
-      ),
+      home: LandingPageDesktop(),
     );
   }
 }

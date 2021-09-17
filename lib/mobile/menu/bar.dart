@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lost/mobile/calls.dart';
-import 'package:lost/mobile/chats.dart';
-import 'package:lost/mobile/status.dart';
+import 'package:lost/mobile/Call_page/calls.dart';
+import 'package:lost/mobile/Chats_Page/chats.dart';
+import 'package:lost/mobile/Status_Page/status.dart';
 import 'package:lost/utils/item_list.dart';
 import 'bottom_bar.dart';
 
@@ -86,7 +86,7 @@ class _LandState extends State<Land> {
                     // CameraPage(),
                     Chat(instance: chats),
                     Status(instance: chats),
-                    const Calls(),
+                    Calls(instance: chats),
                   ],
                 ),
               ),

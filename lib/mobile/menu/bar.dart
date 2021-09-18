@@ -28,6 +28,7 @@ class _LandState extends State<Land> {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
+            automaticallyImplyLeading: false,
             title: Text(
               'WhatsApp',
               style: TextStyle(

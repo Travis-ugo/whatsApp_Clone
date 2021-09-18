@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lost/mobile/Call_page/calls.dart';
-import 'package:lost/mobile/Chats_Page/chats.dart';
-import 'package:lost/mobile/Status_Page/status.dart';
+import 'package:lost/Screens/mobile/Call_page/calls.dart';
+import 'package:lost/Screens/mobile/Chats_Page/chats.dart';
+import 'package:lost/Screens/mobile/Status_Page/status.dart';
 import 'package:lost/utils/item_list.dart';
 import 'bottom_bar.dart';
 

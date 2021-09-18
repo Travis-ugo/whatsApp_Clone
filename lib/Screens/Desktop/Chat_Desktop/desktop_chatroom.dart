@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:lost/Desktop/Chat_Desktop/desktop_message.dart';
+import 'package:lost/Screens/Desktop/Chat_Desktop/desktop_message.dart';
 
 class ChatRoomWeb extends StatelessWidget {
   const ChatRoomWeb({Key? key}) : super(key: key);

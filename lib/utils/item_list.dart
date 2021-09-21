@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'data.dart';
 
+final MyProfile profile = MyProfile(
+  name: 'Travis Okonicha',
+  firstMessage: 'Homty Domty left town',
+  profilepicture: 'assets/6.jpeg',
+  time: '',
+  description: 'Tap to add status update',
+);
+
 List<Settings> set = [
   Settings(
     title: 'Account',

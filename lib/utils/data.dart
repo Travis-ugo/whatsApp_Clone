@@ -45,11 +45,3 @@ class MyProfile {
     required this.time,
   });
 }
-
-final MyProfile profile = MyProfile(
-  name: 'Travis Okonicha',
-  firstMessage: 'Homty Domty left town',
-  profilepicture: 'assets/6.jpeg',
-  time: '',
-  description: 'Tap to add status update',
-);

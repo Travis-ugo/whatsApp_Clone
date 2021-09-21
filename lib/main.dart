@@ -16,10 +16,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // routes: <String, WidgetBuilder>{
-      //   '/': (BuildContext context) => Chat(instance: chats),
-      //   '/DesktopChat': (BuildContext context) => const WebMessages(),
-      // },
       title: 'WhatsApp',
       theme: ThemeData(
         primaryColor: const Color(0xFF0B0D0F),

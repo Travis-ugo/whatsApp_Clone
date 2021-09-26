@@ -42,9 +42,9 @@ class Statuslist extends StatelessWidget {
                     Center(
                       child: LinearPercentIndicator(
                         width: MediaQuery.of(context).size.width / 4,
-                        lineHeight: 10.0,
+                        lineHeight: 7.0,
                         percent: 1.0,
-                        backgroundColor: Colors.grey,
+                        backgroundColor: Colors.grey[400],
                         progressColor: Colors.white,
                         animation: true,
                         animationDuration: 3500,

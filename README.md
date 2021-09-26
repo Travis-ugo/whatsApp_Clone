@@ -1,6 +1,7 @@
 
 
 
+![clone_gif](https://user-images.githubusercontent.com/68594765/134821710-9cd9665e-de7a-4116-8001-32f7768d2669.gif)
 
 # WhatsApp clone
 

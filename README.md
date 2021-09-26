@@ -1,3 +1,5 @@
+![chatstsus](https://user-images.githubusercontent.com/68594765/134809521-a3fb95c7-d24f-458e-8760-3f795d7f8608.png)
+![cloneloading](https://user-images.githubusercontent.com/68594765/134809523-f1a18c77-21cd-43c4-afbc-a2a0dd6254d3.png)
 # WhatsApp clone
 
 A WhatsApp clone with flutter

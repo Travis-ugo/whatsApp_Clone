@@ -1,4 +1,4 @@
-![mobilechat](https://user-images.githubusercontent.com/68594765/134806316-55838727-6ddf-4e6b-b51d-68c7a9926b64.png width="200" height="400")
+![mobilechat](https://user-images.githubusercontent.com/68594765/134806316-55838727-6ddf-4e6b-b51d-68c7a9926b64.pngs=200)
 ![statusmobile](https://user-images.githubusercontent.com/68594765/134806318-5fada3c1-b22b-465d-b83f-60b53d776375.png)
 ![ststus](https://user-images.githubusercontent.com/68594765/134806321-d2ac8ddf-1b20-4e57-99de-f58bd326ce9d.png)
 ![insidechat](https://user-images.githubusercontent.com/68594765/134806215-003bb7fc-10bd-47b3-8e10-279298b425ed.png)

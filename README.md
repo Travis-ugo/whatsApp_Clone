@@ -1,6 +1,8 @@
-![mobilechat](https://user-images.githubusercontent.com/68594765/134806316-55838727-6ddf-4e6b-b51d-68c7a9926b64.png)![mobilechat](https://user-images.githubusercontent.com/68594765/134809221-487c25fc-5c5e-40ae-af18-106daa1feea6.png)
+![mobilechat](https://user-images.githubusercontent.com/68594765/134809221-487c25fc-5c5e-40ae-af18-106daa1feea6.png)
 ![statusmobile](https://user-images.githubusercontent.com/68594765/134809225-7fcf1104-2cca-468f-b0a8-73c502134ea6.png)
-![ststus](https://user-images.githubusercontent.com/68594765/134809226-7761ffa8-2ad7-454d-960d-61cc181d464c.png)
+![insidechat](https://user-images.githubusercontent.com/68594765/134809379-e05ea642-eec2-4c9f-a9b2-0fc8fca4cd49.png)
+![ststus](https://user-images.githubusercontent.com/68594765/134809387-69dbd05a-1950-45d5-a378-7aec61bdecdb.png)
+
 
 # WhatsApp clone
 

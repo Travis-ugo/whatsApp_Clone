@@ -22,7 +22,7 @@ class Web extends StatelessWidget {
         width: 450,
         child: Drawer(
           elevation: 0.0,
-          child: EndDrawer(),
+          child: RightDrawer(),
         ),
       ),
       drawerScrimColor: Colors.transparent,
@@ -30,7 +30,7 @@ class Web extends StatelessWidget {
         width: 425,
         child: Drawer(
           elevation: 0.0,
-          child: WebDrawer(),
+          child: LeftDrawer(),
         ),
       ),
       appBar: AppBar(

@@ -9,7 +9,7 @@ class Response extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
-      mobile: const LandingPageMobile(),
+      mobile: const LandingPageDesktop(),
       desktop: const LandingPageDesktop(),
     );
   }

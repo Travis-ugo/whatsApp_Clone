@@ -6,8 +6,8 @@ import 'package:flutter/widgets.dart';
 import 'package:lost/utils/item_list.dart';
 import 'desktop.dart';
 
-class WebDrawer extends StatelessWidget {
-  const WebDrawer({Key? key}) : super(key: key);
+class LeftDrawer extends StatelessWidget {
+  const LeftDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -130,8 +130,8 @@ class WebDrawer extends StatelessWidget {
   }
 }
 
-class EndDrawer extends StatelessWidget {
-  const EndDrawer({Key? key}) : super(key: key);
+class RightDrawer extends StatelessWidget {
+  const RightDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lost/Screens/Desktop/Landing_Page/deskto_landing_page.dart';
-import 'package:lost/Screens/mobile/Landing_Page/landing_page.dart';
+import 'package:lost/Utils/widget_imports.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class Response extends StatelessWidget {
@@ -9,8 +8,8 @@ class Response extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
-      mobile: const LandingPageDesktop(),
-      desktop: const LandingPageDesktop(),
+      mobile: const LandingPageMobile(),
+      desktop: const LandingPage(),
     );
   }
 }

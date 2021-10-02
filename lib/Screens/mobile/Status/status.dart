@@ -21,7 +21,7 @@ class Status extends StatelessWidget {
             subtitle: Text(profile.description),
             leading: CircleAvatar(
               radius: 29,
-              child: const Align(
+              child: Align(
                 alignment: Alignment.bottomRight,
                 child: CircleAvatar(
                   backgroundColor: Colors.green,
@@ -29,7 +29,7 @@ class Status extends StatelessWidget {
                   child: Icon(
                     Icons.add,
                     size: 15,
-                    color: whiteColor,
+                    color: colorize.whiteColor,
                   ),
                 ),
               ),

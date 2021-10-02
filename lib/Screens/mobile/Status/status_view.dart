@@ -33,7 +33,7 @@ class StatusView extends StatelessWidget {
                         lineHeight: 3.0,
                         percent: 1.0,
                         backgroundColor: Colors.grey,
-                        progressColor: whiteColor,
+                        progressColor: colorize.whiteColor,
                         animation: true,
                         animationDuration: 3500,
                         onAnimationEnd: () {
@@ -47,34 +47,34 @@ class StatusView extends StatelessWidget {
                         chats.profilepicture,
                       ),
                     ),
-                    trailing: const Icon(
+                    trailing: Icon(
                       Icons.more_vert,
-                      color: whiteColor,
+                      color: colorize.whiteColor,
                     ),
                     title: Text(
                       chats.name,
-                      style: const TextStyle(color: whiteColor),
+                      style: TextStyle(color: colorize.whiteColor),
                     ),
                     subtitle: Text(
                       chats.messages + " minutes ago",
-                      style: const TextStyle(color: whiteColor),
+                      style: TextStyle(color: colorize.whiteColor),
                     ),
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height - 205,
                   ),
                   Column(
-                    children: const [
+                    children: [
                       Icon(
                         Icons.keyboard_arrow_up,
                         size: 15,
-                        color: whiteColor,
+                        color: colorize.whiteColor,
                       ),
                       Text(
                         'Reply',
                         style: TextStyle(
                           fontSize: 12,
-                          color: whiteColor,
+                          color: colorize.whiteColor,
                         ),
                       ),
                     ],

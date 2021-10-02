@@ -34,19 +34,19 @@ class Desktop extends StatelessWidget {
           Icon(
             CupertinoIcons.video_camera,
             size: 25,
-            color: greyColor,
+            color: colorize.greyColor,
           ),
           const SizedBox(width: 25),
           Icon(
             Icons.call,
             size: 18,
-            color: greyColor,
+            color: colorize.greyColor,
           ),
           const SizedBox(width: 25),
           VerticalDivider(
             indent: 18,
             endIndent: 18,
-            color: greyColor,
+            color: colorize.greyColor,
           ),
           const SizedBox(width: 25),
           Builder(
@@ -54,7 +54,7 @@ class Desktop extends StatelessWidget {
               icon: Icon(
                 CupertinoIcons.search,
                 size: 19,
-                color: greyColor,
+                color: colorize.greyColor,
               ),
               onPressed: () {
                 Scaffold.of(context).openEndDrawer();
@@ -65,7 +65,7 @@ class Desktop extends StatelessWidget {
           Icon(
             Icons.expand_more,
             size: 23,
-            color: greyColor,
+            color: colorize.greyColor,
           ),
           const SizedBox(width: 25),
         ],
@@ -100,7 +100,7 @@ class Desktop extends StatelessWidget {
                         icon: Icon(
                           CupertinoIcons.search,
                           size: 15,
-                          color: greyColor,
+                          color: colorize.greyColor,
                         ),
                         border: InputBorder.none,
                         focusedBorder: InputBorder.none,
@@ -111,7 +111,7 @@ class Desktop extends StatelessWidget {
                         hintStyle: TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w100,
-                          color: greyColor,
+                          color: colorize.greyColor,
                         ),
                       ),
                     ),

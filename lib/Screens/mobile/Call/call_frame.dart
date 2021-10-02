@@ -20,17 +20,17 @@ class CallFrame extends StatelessWidget {
             const SizedBox(height: 15),
             Text(
               chats.name,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
-                color: whiteColor,
+                color: colorize.greyColor,
               ),
             ),
             const SizedBox(height: 15),
-            const Text(
+            Text(
               'calling',
               style: TextStyle(
-                color: whiteColor,
+                color: colorize.whiteColor,
               ),
             ),
             const SizedBox(height: 550),
@@ -47,19 +47,19 @@ class CallFrame extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      const Icon(
+                      Icon(
                         Icons.volume_up,
-                        color: whiteColor,
+                        color: colorize.whiteColor,
                         size: 30,
                       ),
                       Icon(
                         CupertinoIcons.videocam_fill,
-                        color: greyColor,
+                        color: colorize.whiteColor,
                         size: 30,
                       ),
-                      const Icon(
+                      Icon(
                         Icons.mic_off,
-                        color: whiteColor,
+                        color: colorize.whiteColor,
                         size: 30,
                       ),
                       ClipRRect(
@@ -69,9 +69,9 @@ class CallFrame extends StatelessWidget {
                             Navigator.pop(context);
                           },
                           child: Container(
-                            child: const Icon(
+                            child: Icon(
                               Icons.call_end,
-                              color: whiteColor,
+                              color: colorize.whiteColor,
                               size: 30,
                             ),
                             height: 60,

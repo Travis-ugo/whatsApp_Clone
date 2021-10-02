@@ -31,7 +31,7 @@ class RightDrawer extends StatelessWidget {
                     },
                     icon: Icon(
                       CupertinoIcons.xmark,
-                      color: greyColor,
+                      color: colorize.greyColor,
                       size: 17,
                     ),
                   ),
@@ -40,7 +40,7 @@ class RightDrawer extends StatelessWidget {
                     'Search Messages',
                     style: TextStyle(
                       fontSize: 18,
-                      color: greyColor,
+                      color: colorize.greyColor,
                       fontWeight: FontWeight.w100,
                     ),
                   ),
@@ -65,7 +65,7 @@ class RightDrawer extends StatelessWidget {
                         icon: Icon(
                           CupertinoIcons.search,
                           size: 15,
-                          color: greyColor,
+                          color: colorize.greyColor,
                         ),
                         border: InputBorder.none,
                         focusedBorder: InputBorder.none,
@@ -76,7 +76,7 @@ class RightDrawer extends StatelessWidget {
                         hintStyle: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w100,
-                          color: greyColor,
+                          color: colorize.greyColor,
                         ),
                       ),
                     ),
@@ -87,7 +87,7 @@ class RightDrawer extends StatelessWidget {
                   child: Text(
                     'search for messages',
                     style: TextStyle(
-                      color: greyColor,
+                      color: colorize.greyColor,
                       fontSize: 14,
                       fontWeight: FontWeight.w100,
                     ),

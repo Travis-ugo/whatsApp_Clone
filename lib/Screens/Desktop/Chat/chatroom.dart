@@ -45,9 +45,9 @@ class TextField extends StatelessWidget {
         child: Row(
           children: [
             const SizedBox(width: 20),
-            Icon(CupertinoIcons.smiley, color: greyColor),
+            Icon(CupertinoIcons.smiley, color: colorize.greyColor),
             const SizedBox(width: 20),
-            Icon(Icons.attach_file_rounded, color: greyColor),
+            Icon(Icons.attach_file_rounded, color: colorize.greyColor),
             const SizedBox(width: 20),
             Expanded(
               child: Container(
@@ -70,7 +70,7 @@ class TextField extends StatelessWidget {
                       errorBorder: InputBorder.none,
                       hintText: 'Type a message',
                       hintStyle: TextStyle(
-                        color: greyColor,
+                        color: colorize.greyColor,
                         fontWeight: FontWeight.w100,
                       ),
                     ),
@@ -82,7 +82,7 @@ class TextField extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Icon(
                 CupertinoIcons.mic,
-                color: greyColor,
+                color: colorize.greyColor,
               ),
             ),
           ],

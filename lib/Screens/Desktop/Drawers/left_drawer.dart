@@ -81,7 +81,7 @@ class LeftDrawer extends StatelessWidget {
                         fontWeight: FontWeight.w100,
                       ),
                     ),
-                    Icon(Icons.edit, color: greyColor),
+                    Icon(Icons.edit, color: colorize.greyColor),
                   ],
                 ),
                 const SizedBox(height: 10),
@@ -90,7 +90,7 @@ class LeftDrawer extends StatelessWidget {
                 Text(
                   'This is not your username or pin. this name will be visible to your whatsapp contacts',
                   style: TextStyle(
-                    color: greyColor,
+                    color: colorize.greyColor,
                     fontSize: 14,
                     fontWeight: FontWeight.w100,
                   ),
@@ -110,11 +110,11 @@ class LeftDrawer extends StatelessWidget {
                   children: [
                     Text(
                       'flutter developer',
-                      style: TextStyle(color: greyColor, fontSize: 16),
+                      style: TextStyle(color: colorize.greyColor, fontSize: 16),
                     ),
                     Icon(
                       Icons.edit,
-                      color: greyColor,
+                      color: colorize.greyColor,
                     ),
                   ],
                 ),

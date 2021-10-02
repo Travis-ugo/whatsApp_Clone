@@ -96,7 +96,7 @@ class MessageBox extends StatelessWidget {
                 '90 : 03 Pm',
                 style: TextStyle(
                   fontSize: 12,
-                  color: greyColor,
+                  color: colorize.greyColor,
                 ),
               ),
             ],

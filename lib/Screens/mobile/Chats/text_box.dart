@@ -48,7 +48,7 @@ class TextzBox extends StatelessWidget {
                     decoration: InputDecoration(
                       icon: Icon(
                         CupertinoIcons.smiley,
-                        color: greyColor,
+                        color: colorize.greyColor,
                       ),
                       border: InputBorder.none,
                       focusedBorder: InputBorder.none,
@@ -56,7 +56,7 @@ class TextzBox extends StatelessWidget {
                       disabledBorder: InputBorder.none,
                       errorBorder: InputBorder.none,
                       hintText: 'Message',
-                      hintStyle: TextStyle(color: greyColor),
+                      hintStyle: TextStyle(color: colorize.greyColor),
                     ),
                   ),
                 ),

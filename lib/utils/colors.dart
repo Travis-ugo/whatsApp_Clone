@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
 
-const whiteColor = Colors.white;
-final greyColor = Colors.grey[400];
+class Colorize {
+  Color whiteColor = Colors.white;
+  Color greyColor = Colors.grey.shade400;
+}
+
+final colorize = Colorize();

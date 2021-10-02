@@ -51,7 +51,7 @@ class LandingPageMobile extends StatelessWidget {
             Text(
               'End-to-end encrypted',
               style: TextStyle(
-                color: greyColor,
+                color: colorize.greyColor,
                 fontSize: 12,
               ),
             ),
@@ -61,21 +61,21 @@ class LandingPageMobile extends StatelessWidget {
                   TextSpan(
                     text: 'T',
                     style: TextStyle(
-                      color: greyColor,
+                      color: colorize.greyColor,
                       fontSize: 12,
                     ),
                   ),
                   TextSpan(
                     text: 'R',
                     style: TextStyle(
-                      color: greyColor,
+                      color: colorize.greyColor,
                       fontSize: 22,
                     ),
                   ),
                   TextSpan(
                     text: 'avis',
                     style: TextStyle(
-                      color: greyColor,
+                      color: colorize.greyColor,
                       fontSize: 12,
                     ),
                   ),

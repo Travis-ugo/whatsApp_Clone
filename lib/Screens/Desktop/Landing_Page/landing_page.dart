@@ -18,7 +18,7 @@ class LandingPage extends StatelessWidget {
           children: [
             Icon(
               LineIcons.whatSApp,
-              color: greyColor,
+              color: colorize.greyColor,
               size: 60.0,
             ),
             const SizedBox(height: 20),
@@ -64,21 +64,21 @@ class LandingPage extends StatelessWidget {
                   TextSpan(
                     text: 'T',
                     style: TextStyle(
-                      color: greyColor,
+                      color: colorize.greyColor,
                       fontSize: 12,
                     ),
                   ),
                   TextSpan(
                     text: 'R',
                     style: TextStyle(
-                      color: greyColor,
+                      color: colorize.greyColor,
                       fontSize: 22,
                     ),
                   ),
                   TextSpan(
                     text: 'avis',
                     style: TextStyle(
-                      color: greyColor,
+                      color: colorize.greyColor,
                       fontSize: 12,
                     ),
                   ),

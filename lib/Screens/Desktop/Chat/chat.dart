@@ -35,12 +35,12 @@ class Chats extends StatelessWidget {
                 ),
                 subtitle: Text(
                   chats[index].firstMessage,
-                  style: TextStyle(color: greyColor),
+                  style: TextStyle(color: colorize.greyColor),
                 ),
                 trailing: Column(children: [
                   Text(
                     chats[index].time,
-                    style: TextStyle(fontSize: 12, color: greyColor),
+                    style: TextStyle(fontSize: 12, color: colorize.greyColor),
                   ),
                   const SizedBox(
                     height: 5,

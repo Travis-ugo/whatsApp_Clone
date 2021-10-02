@@ -31,7 +31,7 @@ class MenuBar extends StatelessWidget {
               icon: Icon(
                 Icons.motion_photos_on_outlined,
                 size: 20,
-                color: greyColor,
+                color: colorize.greyColor,
               ),
               onPressed: () {
                 Navigator.push(
@@ -46,19 +46,19 @@ class MenuBar extends StatelessWidget {
             Icon(
               Icons.check_box_outline_blank,
               size: 20,
-              color: greyColor,
+              color: colorize.greyColor,
             ),
             const SizedBox(width: 25),
             Icon(
               Icons.expand_more,
               size: 20,
-              color: greyColor,
+              color: colorize.greyColor,
             ),
             const SizedBox(width: 25),
             Container(
               height: 100,
               width: 0.4,
-              color: greyColor,
+              color: colorize.greyColor,
             ),
           ],
         ),

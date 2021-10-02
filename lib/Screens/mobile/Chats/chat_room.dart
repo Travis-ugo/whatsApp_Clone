@@ -1,11 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:lost/utils/data.dart';
-import 'mobile_text_field.dart';
+import 'package:lost/Utils/widget_imports.dart';
+
+// this widget contains all sent and recieved messages
 
 class ChatRoom extends StatelessWidget {
   const ChatRoom({Key? key, required this.chats}) : super(key: key);
-  final Chats chats;
+  final ChatsInfo chats;
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class ChatRoom extends StatelessWidget {
         ),
       ),
       body: SafeArea(
-        child: MobileTextField(
+        child: TextzBox(
           chats: chats,
         ),
       ),

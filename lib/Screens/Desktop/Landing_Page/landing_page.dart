@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:lost/Screens/Desktop/Menu_Desktop/desktop.dart';
+import 'package:lost/Screens/Desktop/Menu/desktop.dart';
+import 'package:lost/Utils/colors.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
-class LandingPageDesktop extends StatelessWidget {
-  const LandingPageDesktop({Key? key}) : super(key: key);
+class LandingPage extends StatelessWidget {
+  const LandingPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class LandingPageDesktop extends StatelessWidget {
           children: [
             Icon(
               LineIcons.whatSApp,
-              color: Colors.grey[400],
+              color: greyColor,
               size: 60.0,
             ),
             const SizedBox(height: 20),
@@ -36,7 +37,7 @@ class LandingPageDesktop extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Web(),
+                      builder: (context) => const Desktop(),
                     ),
                   );
                 },
@@ -63,21 +64,21 @@ class LandingPageDesktop extends StatelessWidget {
                   TextSpan(
                     text: 'T',
                     style: TextStyle(
-                      color: Colors.grey[400],
+                      color: greyColor,
                       fontSize: 12,
                     ),
                   ),
                   TextSpan(
                     text: 'R',
                     style: TextStyle(
-                      color: Colors.grey[400],
+                      color: greyColor,
                       fontSize: 22,
                     ),
                   ),
                   TextSpan(
                     text: 'avis',
                     style: TextStyle(
-                      color: Colors.grey[400],
+                      color: greyColor,
                       fontSize: 12,
                     ),
                   ),

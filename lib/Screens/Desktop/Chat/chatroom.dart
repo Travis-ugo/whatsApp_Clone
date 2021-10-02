@@ -1,10 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:lost/Screens/Desktop/Chat_Desktop/desktop_message.dart';
+import '../../../Utils/widget_imports.dart';
 
-class ChatRoomWeb extends StatelessWidget {
-  const ChatRoomWeb({Key? key}) : super(key: key);
+import 'messages.dart';
+
+class ChatRooom extends StatelessWidget {
+  const ChatRooom({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +21,9 @@ class ChatRoomWeb extends StatelessWidget {
           children: const [
             Expanded(
               flex: 8,
-              child: WebMessages(),
+              child: Message(),
             ),
-            TextFieldWeb(),
+            TextField(),
           ],
         ),
       ],
@@ -31,12 +31,12 @@ class ChatRoomWeb extends StatelessWidget {
   }
 }
 
-class TextFieldWeb extends StatelessWidget {
-  const TextFieldWeb({Key? key}) : super(key: key);
+class TextField extends StatelessWidget {
+  const TextField({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final _passwordController = TextEditingController();
+    final _messageController = TextEditingController();
     return Positioned(
       bottom: 0.0,
       child: Container(
@@ -45,9 +45,9 @@ class TextFieldWeb extends StatelessWidget {
         child: Row(
           children: [
             const SizedBox(width: 20),
-            Icon(CupertinoIcons.smiley, color: Colors.grey[400]),
+            Icon(CupertinoIcons.smiley, color: greyColor),
             const SizedBox(width: 20),
-            Icon(Icons.attach_file_rounded, color: Colors.grey[400]),
+            Icon(Icons.attach_file_rounded, color: greyColor),
             const SizedBox(width: 20),
             Expanded(
               child: Container(
@@ -61,7 +61,7 @@ class TextFieldWeb extends StatelessWidget {
                   child: TextFormField(
                     style: const TextStyle(color: Colors.white),
                     autofocus: true,
-                    controller: _passwordController,
+                    controller: _messageController,
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       focusedBorder: InputBorder.none,
@@ -70,7 +70,7 @@ class TextFieldWeb extends StatelessWidget {
                       errorBorder: InputBorder.none,
                       hintText: 'Type a message',
                       hintStyle: TextStyle(
-                        color: Colors.grey[400],
+                        color: greyColor,
                         fontWeight: FontWeight.w100,
                       ),
                     ),
@@ -82,7 +82,7 @@ class TextFieldWeb extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Icon(
                 CupertinoIcons.mic,
-                color: Colors.grey[400],
+                color: greyColor,
               ),
             ),
           ],

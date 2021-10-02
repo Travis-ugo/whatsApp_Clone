@@ -1,21 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/widgets.dart';
-import 'package:lost/utils/item_list.dart';
-import 'desktop_chatroom.dart';
+import 'package:lost/Utils/widget_imports.dart';
 
-class WebChat extends StatelessWidget {
-  const WebChat({Key? key}) : super(key: key);
+// A list of all available chats with family and friends
 
-  // print(data);
-  //  data['title'],
+class Chats extends StatelessWidget {
+  const Chats({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // Map? data = ModalRoute.of(context).settings.arguments;
-
-    // Map data = {};
     return ListView.builder(
       itemCount: chats.length,
       itemBuilder: (BuildContext context, int index) {
@@ -23,16 +15,10 @@ class WebChat extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
-                // Chats instance = setting;
-                // Navigator.pushNamed(context, '/mobileInfo', arguments: {
-                //   'firstMessage': instance.firstMessage,
-                //   'name': instance.name,
-                //   'profilePicture': instance.profilepicture,
-                // });
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const ChatRoomWeb(),
+                    builder: (context) => const ChatRooom(),
                   ),
                 );
               },
@@ -49,12 +35,12 @@ class WebChat extends StatelessWidget {
                 ),
                 subtitle: Text(
                   chats[index].firstMessage,
-                  style: TextStyle(color: Colors.grey[400]),
+                  style: TextStyle(color: greyColor),
                 ),
                 trailing: Column(children: [
                   Text(
                     chats[index].time,
-                    style: TextStyle(fontSize: 12, color: Colors.grey[400]),
+                    style: TextStyle(fontSize: 12, color: greyColor),
                   ),
                   const SizedBox(
                     height: 5,

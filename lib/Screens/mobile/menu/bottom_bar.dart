@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:lost/widgets/texbutton.dart';
+
+// this widget holds all page naming when taped animates to the named page
+// using PageView widget, makes it easier to animate to the index page.
 
 bottomBar(PageController controller) {
   return Row(
@@ -53,29 +57,4 @@ bottomBar(PageController controller) {
       ),
     ],
   );
-}
-
-class TexButton extends StatelessWidget {
-  const TexButton({
-    Key? key,
-    required this.callback,
-    required this.text,
-  }) : super(key: key);
-  final String text;
-  final void Function() callback;
-
-  @override
-  Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: callback,
-      child: Text(
-        text,
-        style: TextStyle(
-          fontWeight: FontWeight.w100,
-          fontSize: 16,
-          color: Colors.grey[100],
-        ),
-      ),
-    );
-  }
 }

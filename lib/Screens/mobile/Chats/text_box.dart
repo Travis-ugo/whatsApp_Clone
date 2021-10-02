@@ -1,15 +1,15 @@
-import 'dart:ui';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:lost/utils/data.dart';
-import 'mobile_message.dart';
+import 'package:lost/Utils/widget_imports.dart';
 
-class MobileTextField extends StatelessWidget {
-  const MobileTextField({
+// this widget uses a TextFormField for typing messages
+// to be sent to the chat room
+
+class TextzBox extends StatelessWidget {
+  const TextzBox({
     Key? key,
     required this.chats,
   }) : super(key: key);
-  final Chats chats;
+  final ChatsInfo chats;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class MobileTextField extends StatelessWidget {
       children: [
         Expanded(
           child: SizedBox(
-            child: MobileMessages(
+            child: Messages(
               chats: chats,
             ),
             width: MediaQuery.of(context).size.width,
@@ -48,7 +48,7 @@ class MobileTextField extends StatelessWidget {
                     decoration: InputDecoration(
                       icon: Icon(
                         CupertinoIcons.smiley,
-                        color: Colors.grey[400],
+                        color: greyColor,
                       ),
                       border: InputBorder.none,
                       focusedBorder: InputBorder.none,
@@ -56,7 +56,7 @@ class MobileTextField extends StatelessWidget {
                       disabledBorder: InputBorder.none,
                       errorBorder: InputBorder.none,
                       hintText: 'Message',
-                      hintStyle: TextStyle(color: Colors.grey[400]),
+                      hintStyle: TextStyle(color: greyColor),
                     ),
                   ),
                 ),

@@ -12,7 +12,7 @@ class Settings {
   });
 }
 
-class Chats {
+class ChatsInfo {
   final String profilepicture;
   final String firstMessage;
   final String name;
@@ -20,7 +20,7 @@ class Chats {
   final String messages;
   bool addToCart;
 
-  Chats({
+  ChatsInfo({
     required this.profilepicture,
     required this.firstMessage,
     required this.name,

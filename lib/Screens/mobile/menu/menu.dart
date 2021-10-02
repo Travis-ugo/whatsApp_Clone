@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:lost/Screens/mobile/Call_page/calls.dart';
-import 'package:lost/Screens/mobile/Chats_Page/chats.dart';
-import 'package:lost/Screens/mobile/Status_Page/status.dart';
-import 'package:lost/utils/item_list.dart';
-import 'bottom_bar.dart';
+import 'package:lost/Utils/widget_imports.dart';
 
-class Land extends StatefulWidget {
-  const Land({Key? key}) : super(key: key);
+class Menu extends StatefulWidget {
+  const Menu({Key? key}) : super(key: key);
 
   @override
-  _LandState createState() => _LandState();
+  _MenuState createState() => _MenuState();
 }
 
-class _LandState extends State<Land> {
+class _MenuState extends State<Menu> {
   PageController controller = PageController(initialPage: 0);
   int bottomSelectedIndex = 0;
 

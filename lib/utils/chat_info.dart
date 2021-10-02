@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'data.dart';
 
 final MyProfile profile = MyProfile(
@@ -38,8 +37,8 @@ List<Settings> set = [
   ),
 ];
 
-List<Chats> chats = [
-  Chats(
+List<ChatsInfo> chats = [
+  ChatsInfo(
     profilepicture: 'assets/1.jpeg',
     firstMessage: 'You know, those markdown files that get created',
     name: 'Cameron',
@@ -47,7 +46,7 @@ List<Chats> chats = [
     messages: '1',
     addToCart: true,
   ),
-  Chats(
+  ChatsInfo(
     profilepicture: 'assets/2.jpeg',
     firstMessage: 'You know, those markdown files that get created',
     name: 'Ladipo',
@@ -55,23 +54,23 @@ List<Chats> chats = [
     messages: '3',
     addToCart: true,
   ),
-  Chats(
+  ChatsInfo(
     profilepicture: 'assets/3.jpeg',
     firstMessage: 'You know, those markdown files that get created',
-    name: 'kelvin',
+    name: 'Mum',
     time: '2:22',
     messages: '41',
     addToCart: false,
   ),
-  Chats(
+  ChatsInfo(
     profilepicture: 'assets/4.jpeg',
     firstMessage: 'You know, those markdown files that get created',
-    name: 'Wizkid',
+    name: 'Mama',
     time: '00:10',
     messages: '21',
     addToCart: true,
   ),
-  Chats(
+  ChatsInfo(
     profilepicture: 'assets/5.jpeg',
     firstMessage: 'You know, those markdown files that get created',
     name: 'Darke',
@@ -79,7 +78,7 @@ List<Chats> chats = [
     messages: '3',
     addToCart: false,
   ),
-  Chats(
+  ChatsInfo(
     profilepicture: 'assets/6.jpeg',
     firstMessage: 'You know, those markdown files that get created',
     name: 'Rihanna',
@@ -87,7 +86,7 @@ List<Chats> chats = [
     messages: '1',
     addToCart: true,
   ),
-  Chats(
+  ChatsInfo(
     profilepicture: 'assets/7.jpeg',
     firstMessage: 'You know, those markdown files that get created',
     name: 'Cameron',
@@ -95,7 +94,7 @@ List<Chats> chats = [
     messages: '1',
     addToCart: false,
   ),
-  Chats(
+  ChatsInfo(
     profilepicture: 'assets/8.jpeg',
     firstMessage: 'You know, those markdown files that get created',
     name: 'Ladipo',
@@ -103,7 +102,7 @@ List<Chats> chats = [
     messages: '3',
     addToCart: true,
   ),
-  Chats(
+  ChatsInfo(
     profilepicture: 'assets/9.jpeg',
     firstMessage: 'You know, those markdown files that get created',
     name: 'Custard man',
@@ -111,7 +110,7 @@ List<Chats> chats = [
     messages: '41',
     addToCart: false,
   ),
-  Chats(
+  ChatsInfo(
     profilepicture: 'assets/1.jpeg',
     firstMessage: 'You know, those markdown files that get created',
     name: 'Wizkid',
@@ -119,7 +118,7 @@ List<Chats> chats = [
     messages: '21',
     addToCart: true,
   ),
-  Chats(
+  ChatsInfo(
     profilepicture: 'assets/3.jpeg',
     firstMessage: 'You know, those markdown files that get created',
     name: 'Darke',
@@ -127,7 +126,7 @@ List<Chats> chats = [
     messages: '3',
     addToCart: false,
   ),
-  Chats(
+  ChatsInfo(
     profilepicture: 'assets/6.jpeg',
     firstMessage: 'You know, those markdown files that get created',
     name: 'Rihanna',

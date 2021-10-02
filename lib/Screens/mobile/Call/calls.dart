@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:lost/utils/data.dart';
-import 'package:lost/utils/item_list.dart';
-import 'call_frame.dart';
+import 'package:lost/Utils/widget_imports.dart';
+
+// index[3] it takes all recievd and made calls as well as missed
+// calls from friends and display the time calls where made.
+// call information displayed are generated from the chat_info.dart
+// file, in the Utils folder
 
 class Calls extends StatelessWidget {
   const Calls({Key? key, required this.instance}) : super(key: key);
-  final List<Chats> instance;
+  final List<ChatsInfo> instance;
 
   @override
   Widget build(BuildContext context) {

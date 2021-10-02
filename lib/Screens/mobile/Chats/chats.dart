@@ -1,14 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/widgets.dart';
-import 'package:lost/utils/data.dart';
-import 'package:lost/utils/item_list.dart';
-import 'chat_room.dart';
+import 'package:lost/Utils/widget_imports.dart';
+
+// A list of all available chats with family and friends
+// this is the index[1] page of the whatsapp clone application.
 
 class Chat extends StatelessWidget {
   const Chat({Key? key, required this.instance}) : super(key: key);
-  final List<Chats> instance;
+  final List<ChatsInfo> instance;
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +45,9 @@ class Chat extends StatelessWidget {
                 const SizedBox(
                   height: 5,
                 ),
+                // if user has a new message, a green circle avatar will appeare at the right,
+                // indicating the number of unread messages at the indox.
+                // else nothing will show.
                 CircleAvatar(
                   backgroundColor: (chats[index].addToCart
                       ? Colors.green

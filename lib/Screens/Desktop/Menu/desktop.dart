@@ -1,21 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/widgets.dart';
-import 'package:lost/Screens/Desktop/Chat_Desktop/desktop_chatroom.dart';
-import '../Chat_Desktop/desktop_chat.dart';
-import 'desktop_menu.dart';
-import 'desktop_draw.dart';
+import 'package:lost/Utils/widget_imports.dart';
 
-const bool pageTime = true;
+// Parent widget, holds all desktop widgets
 
-class Web extends StatelessWidget {
-  const Web({Key? key}) : super(key: key);
+class Desktop extends StatelessWidget {
+  const Desktop({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final _passwordController = TextEditingController();
-
+    final _newChatController = TextEditingController();
     return Scaffold(
       backgroundColor: const Color(0xFF111C21),
       endDrawer: const SizedBox(
@@ -41,19 +34,19 @@ class Web extends StatelessWidget {
           Icon(
             CupertinoIcons.video_camera,
             size: 25,
-            color: Colors.grey[400],
+            color: greyColor,
           ),
           const SizedBox(width: 25),
           Icon(
             Icons.call,
             size: 18,
-            color: Colors.grey[400],
+            color: greyColor,
           ),
           const SizedBox(width: 25),
           VerticalDivider(
             indent: 18,
             endIndent: 18,
-            color: Colors.grey[400],
+            color: greyColor,
           ),
           const SizedBox(width: 25),
           Builder(
@@ -61,7 +54,7 @@ class Web extends StatelessWidget {
               icon: Icon(
                 CupertinoIcons.search,
                 size: 19,
-                color: Colors.grey[400],
+                color: greyColor,
               ),
               onPressed: () {
                 Scaffold.of(context).openEndDrawer();
@@ -72,7 +65,7 @@ class Web extends StatelessWidget {
           Icon(
             Icons.expand_more,
             size: 23,
-            color: Colors.grey[400],
+            color: greyColor,
           ),
           const SizedBox(width: 25),
         ],
@@ -97,15 +90,17 @@ class Web extends StatelessWidget {
                 Padding(
                   padding:
                       const EdgeInsets.symmetric(vertical: 7, horizontal: 25),
+                  // decorated container for TextFormFiled .
+                  // widget found in the Wigets folder, in field.dart file.
                   child: Field(
                     child: TextFormField(
                       style: const TextStyle(color: Colors.white),
-                      controller: _passwordController,
+                      controller: _newChatController,
                       decoration: InputDecoration(
                         icon: Icon(
                           CupertinoIcons.search,
                           size: 15,
-                          color: Colors.grey[400],
+                          color: greyColor,
                         ),
                         border: InputBorder.none,
                         focusedBorder: InputBorder.none,
@@ -116,7 +111,7 @@ class Web extends StatelessWidget {
                         hintStyle: TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w100,
-                          color: Colors.grey[400],
+                          color: greyColor,
                         ),
                       ),
                     ),
@@ -124,41 +119,17 @@ class Web extends StatelessWidget {
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height - 120,
-                  child: const WebChat(),
+                  child: const Chats(),
                 ),
               ],
             ),
           ),
           const Expanded(
-            child: ChatRoomWeb(),
-            // (pageTime == true)
-            //     ? Image(
-            //         image: AssetImage('assets/face.png'),
-            //         fit: BoxFit.fill,
-            //       )
-            //     : ChatRoomWeb(),
+            child: ChatRooom(),
             flex: 4,
           ),
         ],
       ),
-    );
-  }
-}
-
-class Field extends StatelessWidget {
-  const Field({Key? key, required this.child}) : super(key: key);
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
-      height: 37,
-      decoration: BoxDecoration(
-        color: const Color(0xFF2D3333),
-        borderRadius: BorderRadius.circular(60),
-      ),
-      child: Center(child: child),
     );
   }
 }

@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:lost/Utils/widget_imports.dart';
 
-class WebMessages extends StatelessWidget {
-  const WebMessages({Key? key}) : super(key: key);
+// this widget helps seperate sent message
+// and replies from chatroom.
+
+class Messages extends StatelessWidget {
+  const Messages({
+    Key? key,
+    required this.chats,
+  }) : super(key: key);
+  final ChatsInfo chats;
 
   @override
   Widget build(BuildContext context) {
@@ -10,32 +18,40 @@ class WebMessages extends StatelessWidget {
       itemCount: 13,
       itemBuilder: (BuildContext context, int index) {
         return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 50),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
-            children: const [
+            children: [
               MessageBox(
-                leftHand: 10,
+                color: const Color(0xFFD3FEC5),
+                leftHand: 15,
                 rightHand: 0,
                 align: Alignment.topRight,
-                color: Color(0xFF128c7e),
+                text: profile.firstMessage,
+                chats: chats,
               ),
               MessageBox(
+                color: const Color(0xFFF5F5F5),
                 leftHand: 0,
-                rightHand: 10,
+                rightHand: 15,
                 align: Alignment.topLeft,
-                color: Color(0xFF2D3333),
+                text: chats.firstMessage,
+                chats: chats,
               ),
               MessageBox(
-                leftHand: 10,
+                color: const Color(0xFFD3FEC5),
+                leftHand: 15,
                 rightHand: 0,
                 align: Alignment.topRight,
-                color: Color(0xFF128c7e),
+                text: profile.firstMessage,
+                chats: chats,
               ),
               MessageBox(
+                color: const Color(0xFFF5F5F5),
                 leftHand: 0,
-                rightHand: 10,
+                rightHand: 15,
                 align: Alignment.topLeft,
-                color: Color(0xFF2D3333),
+                text: chats.firstMessage,
+                chats: chats,
               ),
             ],
           ),
@@ -45,18 +61,25 @@ class WebMessages extends StatelessWidget {
   }
 }
 
+// this widget contains sent and recieved messages
+// in a decorated container.
+
 class MessageBox extends StatelessWidget {
   const MessageBox({
     Key? key,
+    required this.color,
     required this.rightHand,
     required this.leftHand,
     required this.align,
-    required this.color,
+    required this.text,
+    required this.chats,
   }) : super(key: key);
   final AlignmentGeometry align;
   final double rightHand;
   final double leftHand;
   final Color color;
+  final String text;
+  final ChatsInfo chats;
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +87,7 @@ class MessageBox extends StatelessWidget {
       alignment: align,
       child: ConstrainedBox(
         constraints: const BoxConstraints(
-          maxWidth: 400,
+          maxWidth: 200,
         ),
         child: Container(
           padding: const EdgeInsets.all(10),
@@ -73,27 +96,28 @@ class MessageBox extends StatelessWidget {
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(leftHand),
               topRight: Radius.circular(rightHand),
-              bottomRight: const Radius.circular(10),
-              bottomLeft: const Radius.circular(10),
+              bottomRight: const Radius.circular(15),
+              bottomLeft: const Radius.circular(15),
             ),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              const Center(
-                child: Text(
-                  'Woolha dot com Woolha dot com Woolha dot com Woolha Woolha dot com Woolha dot com Woolha dot com Woolha dot com Woolha dot com Woolha dot com Woolha dot com Woolha dot com Woolha dot com',
-                  textAlign: TextAlign.start,
-                  style: TextStyle(color: Colors.white, fontSize: 14),
-                  overflow: TextOverflow.visible,
-                ),
-              ),
               Text(
-                '90 : 03 Pm',
+                text,
+                textAlign: TextAlign.start,
+                style: TextStyle(color: Colors.grey[800], fontSize: 14),
+                overflow: TextOverflow.visible,
+              ),
+              const SizedBox(height: 3),
+              Text(
+                chats.time,
                 style: TextStyle(
-                  fontSize: 12,
-                  color: Colors.grey[400],
+                  fontSize: 9,
+                  color: Colors.grey[600],
                 ),
+                textAlign: TextAlign.left,
               ),
             ],
           ),

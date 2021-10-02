@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:lost/utils/data.dart';
-import 'package:lost/utils/item_list.dart';
+import 'package:lost/utils/chat_info.dart';
 
 // Mobile setting page.
+// however, this page was never used in the whatsapp clone,
+// this widget is the exact settings page of the real time whatsapp
+// to be used if you wish
 
 class Settings extends StatelessWidget {
   const Settings({Key? key}) : super(key: key);

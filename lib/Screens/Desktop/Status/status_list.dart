@@ -1,11 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:lost/utils/data.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
+import 'package:lost/Utils/widget_imports.dart';
 
 class Statuslist extends StatelessWidget {
   const Statuslist({Key? key, required this.chats}) : super(key: key);
-  final Chats chats;
+  final ChatsInfo chats;
 
   @override
   Widget build(BuildContext context) {

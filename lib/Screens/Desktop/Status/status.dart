@@ -1,14 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:lost/utils/data.dart';
-import 'package:lost/utils/item_list.dart';
+import '../../../Utils/widget_imports.dart';
+import 'status_list.dart';
 
-import 'desktop_status_view.dart';
+// this widgte displays all available status updates on the Desktop view
+// status information displayed are generated from the chat_info.dart
+// file, in the Utils folder
 
-class WebStatus extends StatelessWidget {
-  const WebStatus({Key? key, required this.instance}) : super(key: key);
-  final List<Chats> instance;
+class Status extends StatelessWidget {
+  const Status({Key? key, required this.instance}) : super(key: key);
+  final List<ChatsInfo> instance;
 
   @override
   Widget build(BuildContext context) {
@@ -82,8 +82,8 @@ class WebStatus extends StatelessWidget {
   }
 }
 
-class WebStarStatus extends StatelessWidget {
-  const WebStarStatus({Key? key}) : super(key: key);
+class StatusSpace extends StatelessWidget {
+  const StatusSpace({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +95,7 @@ class WebStarStatus extends StatelessWidget {
             color: Colors.grey[200],
             width: 450,
             height: MediaQuery.of(context).size.height,
-            child: WebStatus(instance: chats),
+            child: Status(instance: chats),
           ),
           Expanded(
             child: Column(

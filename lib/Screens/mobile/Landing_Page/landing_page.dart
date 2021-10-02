@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:line_icons/line_icons.dart';
-import 'package:lost/Screens/mobile/menu/bar.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
+import 'package:lost/Utils/widget_imports.dart';
 
 class LandingPageMobile extends StatelessWidget {
   const LandingPageMobile({Key? key}) : super(key: key);
@@ -36,7 +34,7 @@ class LandingPageMobile extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Land(),
+                      builder: (context) => const Menu(),
                     ),
                   );
                 },
@@ -53,7 +51,7 @@ class LandingPageMobile extends StatelessWidget {
             Text(
               'End-to-end encrypted',
               style: TextStyle(
-                color: Colors.grey[400],
+                color: greyColor,
                 fontSize: 12,
               ),
             ),
@@ -63,21 +61,21 @@ class LandingPageMobile extends StatelessWidget {
                   TextSpan(
                     text: 'T',
                     style: TextStyle(
-                      color: Colors.grey[400],
+                      color: greyColor,
                       fontSize: 12,
                     ),
                   ),
                   TextSpan(
                     text: 'R',
                     style: TextStyle(
-                      color: Colors.grey[400],
+                      color: greyColor,
                       fontSize: 22,
                     ),
                   ),
                   TextSpan(
                     text: 'avis',
                     style: TextStyle(
-                      color: Colors.grey[400],
+                      color: greyColor,
                       fontSize: 12,
                     ),
                   ),

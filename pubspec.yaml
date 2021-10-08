@@ -14,6 +14,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   percent_indicator: ^3.0.1
   responsive_builder: ^0.4.1
+  riverpod: ^0.14.0+3
+  flutter_hooks: ^0.18.0
   line_icons: ^2.0.1
 
 

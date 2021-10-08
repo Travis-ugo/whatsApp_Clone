@@ -9,7 +9,12 @@ class Message extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ScrollController ontroller = ScrollController(
+      initialScrollOffset: 1,
+      keepScrollOffset: true,
+    );
     return ListView.builder(
+      controller: ontroller,
       reverse: true,
       itemCount: 13,
       itemBuilder: (BuildContext context, int index) {

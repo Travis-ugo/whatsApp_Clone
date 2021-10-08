@@ -8,7 +8,10 @@ class Chats extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ScrollController? _chatsController = ScrollController();
+
     return ListView.builder(
+      controller: _chatsController,
       itemCount: chats.length,
       itemBuilder: (BuildContext context, int index) {
         return Column(

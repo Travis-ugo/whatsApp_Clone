@@ -71,7 +71,8 @@ class Desktop extends StatelessWidget {
         ],
         title: const MenuBar(),
       ),
-      body: Row(
+      body: Flex(
+        direction: Axis.horizontal,
         children: [
           Container(
             decoration: const BoxDecoration(
@@ -109,6 +110,7 @@ class Desktop extends StatelessWidget {
                         errorBorder: InputBorder.none,
                         hintText: 'Search or start new chart',
                         hintStyle: TextStyle(
+                          // overflow: TextOverflow.fade,
                           fontSize: 13,
                           fontWeight: FontWeight.w100,
                           color: colorize.greyColor,

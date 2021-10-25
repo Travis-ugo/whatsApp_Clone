@@ -41,7 +41,7 @@ List<ChatsInfo> chats = [
   ChatsInfo(
     profilepicture: 'assets/1.jpeg',
     firstMessage: 'You know, those markdown files that get created',
-    name: 'Cameron',
+    name: 'Daniel',
     time: '5:37',
     messages: '1',
     addToCart: true,
@@ -49,7 +49,7 @@ List<ChatsInfo> chats = [
   ChatsInfo(
     profilepicture: 'assets/2.jpeg',
     firstMessage: 'You know, those markdown files that get created',
-    name: 'Ladipo',
+    name: 'Mark',
     time: '21:41',
     messages: '3',
     addToCart: true,
@@ -65,7 +65,7 @@ List<ChatsInfo> chats = [
   ChatsInfo(
     profilepicture: 'assets/4.jpeg',
     firstMessage: 'You know, those markdown files that get created',
-    name: 'Mama',
+    name: 'Olivia',
     time: '00:10',
     messages: '21',
     addToCart: true,
@@ -73,7 +73,7 @@ List<ChatsInfo> chats = [
   ChatsInfo(
     profilepicture: 'assets/5.jpeg',
     firstMessage: 'You know, those markdown files that get created',
-    name: 'Darke',
+    name: 'Charlotte',
     time: '12:03',
     messages: '3',
     addToCart: false,
@@ -81,7 +81,7 @@ List<ChatsInfo> chats = [
   ChatsInfo(
     profilepicture: 'assets/6.jpeg',
     firstMessage: 'You know, those markdown files that get created',
-    name: 'Rihanna',
+    name: 'Patricia',
     time: '10:07',
     messages: '1',
     addToCart: true,
@@ -89,7 +89,7 @@ List<ChatsInfo> chats = [
   ChatsInfo(
     profilepicture: 'assets/7.jpeg',
     firstMessage: 'You know, those markdown files that get created',
-    name: 'Cameron',
+    name: 'Liam',
     time: '5:37',
     messages: '1',
     addToCart: false,
@@ -97,7 +97,7 @@ List<ChatsInfo> chats = [
   ChatsInfo(
     profilepicture: 'assets/8.jpeg',
     firstMessage: 'You know, those markdown files that get created',
-    name: 'Ladipo',
+    name: 'Lucas',
     time: '21:41',
     messages: '3',
     addToCart: true,
@@ -105,7 +105,7 @@ List<ChatsInfo> chats = [
   ChatsInfo(
     profilepicture: 'assets/9.jpeg',
     firstMessage: 'You know, those markdown files that get created',
-    name: 'Custard man',
+    name: 'Ava',
     time: '2:22',
     messages: '41',
     addToCart: false,
@@ -113,7 +113,7 @@ List<ChatsInfo> chats = [
   ChatsInfo(
     profilepicture: 'assets/1.jpeg',
     firstMessage: 'You know, those markdown files that get created',
-    name: 'Wizkid',
+    name: 'Mia',
     time: '00:10',
     messages: '21',
     addToCart: true,
@@ -121,7 +121,7 @@ List<ChatsInfo> chats = [
   ChatsInfo(
     profilepicture: 'assets/3.jpeg',
     firstMessage: 'You know, those markdown files that get created',
-    name: 'Darke',
+    name: 'Benjamin',
     time: '12:03',
     messages: '3',
     addToCart: false,
@@ -129,7 +129,7 @@ List<ChatsInfo> chats = [
   ChatsInfo(
     profilepicture: 'assets/6.jpeg',
     firstMessage: 'You know, those markdown files that get created',
-    name: 'Rihanna',
+    name: 'Isabella',
     time: '10:07',
     messages: '1',
     addToCart: true,

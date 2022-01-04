@@ -14,7 +14,6 @@
 ![](https://img.shields.io/badge/Editor-Android_Studio-informational?style=flat&logo=android-studio&logoColor=cyan&color=3DDC84)
 ![](https://img.shields.io/badge/Code-Dart-informational?style=flat&logo=Dart&logoColor=aqua&color=87ceeb)
 ![](https://img.shields.io/badge/Framework-Flutter-informational?style=flat&logo=flutter&logoColor=cyan&color=00FFFF)
-![](https://img.shields.io/badge/Tools-firebase-informational?style=flat&logo=firebase&logoColor=Yellow&color=ffca28)
 
 ![Travis-ugo's GitHub stats](https://github-readme-stats.vercel.app/api?username=Travis-ugo&show_icons=true&theme=dark)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Travis-ugo&hide=python,Ruby,PowerShell&layout=compact&theme=dark)](https://github.com/Travis-ugo/Mobile_HR)

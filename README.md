@@ -1,10 +1,9 @@
 
-## Welcome to The Aricah Cross Platform Mobile Applicaition
-- The Aricah Cross platform Mobile Application which will soon be hosted on google play store and apple app store is built for the purpose of simplifying job search and recruitment process locally and international areas. 
-- the Application is built with various technologies including Googles Flutter, Dart lang, Googles Firebase as it main back end support in the applications beta mood, changes will be made and proper documentations will be made as the the release of the mobile applicarion with a proper API written in PHP lang and Laravel Framework.
+## Welcome to The Andriod WhatsApp Clone Mobile Applicaition
+- This is a replica of the popular whatsApp known all over the world, this is probably the best whatsApp clone written in Dart Lang with Flutter Frame work
+- the Application is built with various technologies including Googles Flutter and Dart lang.
 - Simplified code base with the use of flutter native stateless and stateful widget. however code is still under refactor.
 - Built with fultter 2.8, however flutter 2.5 or lower will not be run this program, if so, use "pub upgrade" to get the latest version of flutter.
-- For proper code documentation, check out the readme file in the "LIB" folder.
 
 
 ## 🔧 Technologies & Tools

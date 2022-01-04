@@ -17,12 +17,10 @@
 ![](https://img.shields.io/badge/Framework-Flutter-informational?style=flat&logo=flutter&logoColor=cyan&color=00FFFF)
 ![](https://img.shields.io/badge/Tools-firebase-informational?style=flat&logo=firebase&logoColor=Yellow&color=ffca28)
 
-## &#x1f4c8; GitHub Stats
-
 ![Travis-ugo's GitHub stats](https://github-readme-stats.vercel.app/api?username=Travis-ugo&show_icons=true&theme=dark)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Travis-ugo&hide=python,Ruby,PowerShell&layout=compact&theme=dark)](https://github.com/Travis-ugo/Mobile_HR)
 
-
+# Mobile View
 ![clone_gif](https://user-images.githubusercontent.com/68594765/134821710-9cd9665e-de7a-4116-8001-32f7768d2669.gif)
 
 
@@ -32,7 +30,7 @@
 ![chatstsus](https://user-images.githubusercontent.com/68594765/134809920-abf3b26b-af26-441e-9da3-ed18adea8a65.png)
 ![stst](https://user-images.githubusercontent.com/68594765/134809927-1983971c-4fa0-4e57-9f41-2880f9fb1013.png)
 
-# Mobile View
+# Desktop View
 
 ![mobilechat](https://user-images.githubusercontent.com/68594765/134809221-487c25fc-5c5e-40ae-af18-106daa1feea6.png)
 ![statusmobile](https://user-images.githubusercontent.com/68594765/134809225-7fcf1104-2cca-468f-b0a8-73c502134ea6.png)

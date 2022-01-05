@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lost/Utils/widget_imports.dart';
 
+import 'Widgets/message_form_field.dart';
+
 // this widget contains all sent and recieved messages
 
 class ChatRoom extends StatelessWidget {
@@ -56,7 +58,7 @@ class ChatRoom extends StatelessWidget {
         ),
       ),
       body: SafeArea(
-        child: TextzBox(
+        child: MessageBoxField(
           chats: chats,
         ),
       ),

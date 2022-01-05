@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lost/Utils/widget_imports.dart';
 
+import '../message_body.dart.dart';
+
 // this widget uses a TextFormField for typing messages
 // to be sent to the chat room
 

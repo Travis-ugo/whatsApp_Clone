@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:lost/Screens/Desktop/Menu/desktop.dart';
 import 'package:lost/Utils/colors.dart';
+import 'package:lost/Views/Desktop/Menu/desktop.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class LandingPage extends StatelessWidget {
@@ -37,7 +37,7 @@ class LandingPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Desktop(),
+                      builder: (context) => const DesktopHomePage(),
                     ),
                   );
                 },

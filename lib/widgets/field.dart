@@ -7,7 +7,7 @@ class Field extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 12),
       height: 37,
       decoration: BoxDecoration(
         color: const Color(0xFF2D3333),

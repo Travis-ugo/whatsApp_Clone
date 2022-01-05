@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lost/Screens/Desktop/Status/status.dart';
+import 'package:lost/Views/Desktop/Status/Widgets/status_whitespace.dart';
 import 'package:lost/Utils/widget_imports.dart';
 
 class MenuBar extends StatelessWidget {
@@ -37,7 +37,7 @@ class MenuBar extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const StatusSpace(),
+                    builder: (context) => const StatusWhiteSpace(),
                   ),
                 );
               },
@@ -73,7 +73,7 @@ class MenuBar extends StatelessWidget {
             ),
             const SizedBox(width: 20),
             Text(
-              'Hope and trust',
+              'Trenches',
               style: TextStyle(
                 fontWeight: FontWeight.w100,
                 fontSize: 16,

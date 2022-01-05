@@ -1,9 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lost/Utils/widget_imports.dart';
 
-class Statuslist extends StatelessWidget {
-  const Statuslist({Key? key, required this.chats}) : super(key: key);
+class StatusView extends StatelessWidget {
+  const StatusView({Key? key, required this.chats}) : super(key: key);
   final ChatsInfo chats;
 
   @override

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:iconly/iconly.dart';
 import 'package:lost/Utils/widget_imports.dart';
 
 // Parent widget, holds all desktop widgets
 
-class Desktop extends StatelessWidget {
-  const Desktop({Key? key}) : super(key: key);
+class DesktopHomePage extends StatelessWidget {
+  const DesktopHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,13 +33,13 @@ class Desktop extends StatelessWidget {
         elevation: 0.0,
         actions: [
           Icon(
-            CupertinoIcons.video_camera,
-            size: 25,
+            IconlyBold.video,
+            size: 23,
             color: colorize.greyColor,
           ),
           const SizedBox(width: 25),
           Icon(
-            Icons.call,
+            IconlyBold.call,
             size: 18,
             color: colorize.greyColor,
           ),
@@ -52,8 +53,8 @@ class Desktop extends StatelessWidget {
           Builder(
             builder: (context) => IconButton(
               icon: Icon(
-                CupertinoIcons.search,
-                size: 19,
+                IconlyLight.search,
+                size: 23,
                 color: colorize.greyColor,
               ),
               onPressed: () {
@@ -71,8 +72,8 @@ class Desktop extends StatelessWidget {
         ],
         title: const MenuBar(),
       ),
-      body: Flex(
-        direction: Axis.horizontal,
+      body: Row(
+        // direction: Axis.horizontal,
         children: [
           Container(
             decoration: const BoxDecoration(
@@ -85,50 +86,50 @@ class Desktop extends StatelessWidget {
               ),
             ),
             width: 430,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 7, horizontal: 25),
-                  // decorated container for TextFormFiled .
-                  // widget found in the Wigets folder, in field.dart file.
-                  child: Field(
-                    child: TextFormField(
-                      style: const TextStyle(color: Colors.white),
-                      controller: _newChatController,
-                      decoration: InputDecoration(
-                        icon: Icon(
-                          CupertinoIcons.search,
-                          size: 15,
-                          color: colorize.greyColor,
-                        ),
-                        border: InputBorder.none,
-                        focusedBorder: InputBorder.none,
-                        enabledBorder: InputBorder.none,
-                        disabledBorder: InputBorder.none,
-                        errorBorder: InputBorder.none,
-                        hintText: 'Search or start new chart',
-                        hintStyle: TextStyle(
-                          // overflow: TextOverflow.fade,
-                          fontSize: 13,
-                          fontWeight: FontWeight.w100,
-                          color: colorize.greyColor,
+            child: CustomScrollView(
+              // mainAxisAlignment: MainAxisAlignment.center,
+              slivers: [
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 20, horizontal: 25),
+                    // decorated container for TextFormFiled .
+                    // widget found in the Wigets folder, in field.dart file.
+                    child: Field(
+                      child: TextFormField(
+                        style: const TextStyle(color: Colors.white),
+                        controller: _newChatController,
+                        decoration: InputDecoration(
+                          icon: Icon(
+                            IconlyLight.search,
+                            size: 18,
+                            color: colorize.greyColor,
+                          ),
+                          border: InputBorder.none,
+                          focusedBorder: InputBorder.none,
+                          enabledBorder: InputBorder.none,
+                          disabledBorder: InputBorder.none,
+                          errorBorder: InputBorder.none,
+                          hintText: 'Search or start new chart',
+                          hintStyle: TextStyle(
+                            // overflow: TextOverflow.fade,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w100,
+                            color: colorize.greyColor,
+                          ),
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height - 120,
-                  child: const Chats(),
+                const SliverToBoxAdapter(
+                  child: Chats(),
                 ),
               ],
             ),
           ),
           const Expanded(
-            child: ChatRooom(),
-            flex: 4,
+            child: SizedBox(width: 400, child: ChatRooom()),
           ),
         ],
       ),

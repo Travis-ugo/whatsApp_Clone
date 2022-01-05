@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'Responsive/responsive_layout.dart';
+import 'package:lost/Utils/widget_imports.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +23,19 @@ class MyApp extends StatelessWidget {
               ),
         ),
       ),
-      home: const Response(),
+      home: const LandingPage(),
+    );
+  }
+}
+
+class Response extends StatelessWidget {
+  const Response({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ScreenTypeLayout(
+      mobile: const LandingPageMobile(),
+      desktop: const LandingPage(),
     );
   }
 }

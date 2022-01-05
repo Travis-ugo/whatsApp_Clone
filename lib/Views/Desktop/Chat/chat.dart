@@ -11,8 +11,9 @@ class Chats extends StatelessWidget {
     ScrollController? _chatsController = ScrollController();
 
     return ListView.builder(
-      controller: _chatsController,
+      shrinkWrap: true,
       itemCount: chats.length,
+      controller: _chatsController,
       itemBuilder: (BuildContext context, int index) {
         return Column(
           children: [
@@ -74,6 +75,7 @@ class Chats extends StatelessWidget {
             ),
             Divider(
               color: Colors.grey[600],
+              thickness: 0.5,
               indent: 85,
               endIndent: 10,
             ),

@@ -109,7 +109,7 @@ class LeftDrawer extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'flutter developer',
+                      'Software Developer',
                       style: TextStyle(color: colorize.greyColor, fontSize: 16),
                     ),
                     Icon(

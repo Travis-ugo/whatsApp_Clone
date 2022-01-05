@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lost/widgets/texbutton.dart';
+import 'Widgets/texbutton.dart';
 
 // this widget holds all page naming when taped animates to the named page
 // using PageView widget, makes it easier to animate to the index page.

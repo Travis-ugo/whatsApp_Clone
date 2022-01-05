@@ -4,8 +4,8 @@ import 'package:lost/Utils/widget_imports.dart';
 // this widget uses a TextFormField for typing messages
 // to be sent to the chat room
 
-class TextzBox extends StatelessWidget {
-  const TextzBox({
+class MessageBoxField extends StatelessWidget {
+  const MessageBoxField({
     Key? key,
     required this.chats,
   }) : super(key: key);
@@ -13,7 +13,7 @@ class TextzBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _passwordController = TextEditingController();
+    final _textController = TextEditingController();
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -44,7 +44,7 @@ class TextzBox extends StatelessWidget {
                     textAlign: TextAlign.start,
                     style: TextStyle(color: Colors.grey[800]),
                     autofocus: true,
-                    controller: _passwordController,
+                    controller: _textController,
                     decoration: InputDecoration(
                       icon: Icon(
                         CupertinoIcons.smiley,

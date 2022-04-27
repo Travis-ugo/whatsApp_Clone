@@ -11,13 +11,8 @@
 ![](https://img.shields.io/badge/Code-Dart-informational?style=flat&logo=Dart&logoColor=aqua&color=87ceeb) 
 ![](https://img.shields.io/badge/Framework-Flutter-informational?style=flat&logo=flutter&logoColor=cyan&color=00FFFF)
 
-![Travis-ugo's GitHub stats](https://github-readme-stats.vercel.app/api?username=Travis-ugo&show_icons=true&theme=dark)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Travis-ugo&hide=python,Ruby,PowerShell&layout=compact&theme=dark)](https://github.com/Travis-ugo/Mobile_HR)
 
-
-<!-- ![clone_gif](https://user-images.githubusercontent.com/68594765/134821710-9cd9665e-de7a-4116-8001-32f7768d2669.gif) -->
-
-#### Mobile View
+### Mobile View
 <div>
   <img src = "https://user-images.githubusercontent.com/68594765/134821710-9cd9665e-de7a-4116-8001-32f7768d2669.gif" width = "19%">
   <img src = "https://user-images.githubusercontent.com/68594765/134809221-487c25fc-5c5e-40ae-af18-106daa1feea6.png" width = "19%">
@@ -27,7 +22,7 @@
 <div/>
   
 
-#### Desktop View
+### Desktop View
   
   <div>
     <img src = "https://user-images.githubusercontent.com/68594765/134809924-52f0ef22-146d-40de-987d-4d1369779aa1.png" width = "49%">
